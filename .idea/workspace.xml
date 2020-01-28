@@ -1,7 +1,439 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b740cd1-ff4d-461e-b869-94c6ecb43b50" name="Default Changelist" comment="" />
+    <list default="true" id="2b740cd1-ff4d-461e-b869-94c6ecb43b50" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/config.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/28.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/29.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/30.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/31.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/34.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/37.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/38.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/39.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/douche.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/henk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/jij.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/start.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/img/winkeleigenaar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sources/style/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/partials/level_template.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/auth/accountmaken.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/auth/fouteinlog.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/auth/inloggen.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/auth/logout.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/battleengine.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/begin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/casino.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/db/db.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/gameover.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/healthbar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/home.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/18.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/22.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/23.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/24.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/25.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/28.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/29.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/30.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/31.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/33.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/34.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/35.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/36.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/37.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/38.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/39.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/40.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/douche.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/henk.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/jij.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/start.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/img/winkeleigenaar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/koopshop.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/muziek.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/11.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/111.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/11111.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/111111.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/1112.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/112.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/1121.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/11211.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/11212.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/112121.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/1122.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/11221.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/112211.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/112212.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/1122121.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/11221211.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/11222.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/12.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/121.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/1211.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/12111.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/121111.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/12112.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/1212.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/12121.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/121211.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/121212.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/1212121.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/12122.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/121221.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/1212211.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/12122111.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/12122112.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/122.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/1221.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/12211.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/122111.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/1221111.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/1221112.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/122112.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/12212.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/1222(1).php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/1222.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/12221.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/122211.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/122212.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/1222121.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/12222.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/122221.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/1222211.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/12222111.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/12222112.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/122221121.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/1222211211.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/1222212.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/12222121.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/122221211.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/122222.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/21.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/211.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/2111.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/21111.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/21112.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/2112.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/212.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/22.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/221.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/2212.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/22121.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/222.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/2221.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/22211.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/222111.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/222112.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/2221121.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/22212.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/222121.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/2221211.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/2222.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel11.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel111.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel21.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel211.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel212.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel22.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel221.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel23.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel231.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel2311.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel23111.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel232.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel2321.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel3.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel31.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel4.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel5.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel51.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel511.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel5111.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel5112.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel512.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/hotel52.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/winkel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/winkel1.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/winkel11.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/winkel111.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/winkel1111.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/winkel112.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/winkel1121(1).php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/winkel1121.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/winkel12.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/winkel121.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/winkel1211.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/partials/winkel2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/s.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/shop.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/stad.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/startgame.htm" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/verkoopshop.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zombit_old/wachtwoordvergeten.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/11.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/111.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/11111.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/111111.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1112.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/112.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1121.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/11211.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/11212.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/112121.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1122.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/11221.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/112211.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/112212.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1122121.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/11221211.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/11222.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/12.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/121.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1211.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/12111.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/121111.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/12112.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1212.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/12121.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/121211.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/121212.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1212121.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/12122.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/121221.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1212211.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/12122111.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/12122112.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/122.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1221.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/12211.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/122111.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1221111.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1221112.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/122112.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/12212.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1222(1).php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1222.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/12221.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/122211.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/122212.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1222121.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/12222.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/122221.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1222211.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/12222111.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/12222112.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/122221121.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1222211211.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1222212.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/12222121.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/122221211.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/122222.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/21.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/211.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2111.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/21111.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/21112.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2112.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/212.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/22.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/221.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2212.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/22121.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/222.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2221.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/22211.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/222111.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/222112.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2221121.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/22212.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/222121.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2221211.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2222.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountmaken.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/battleengine.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/begin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/casino.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/db.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/douche.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fouteinlog.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gameover.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/healthbar.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/henk.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel11.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel111.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel21.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel211.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel212.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel22.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel221.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel23.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel231.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel2311.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel23111.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel232.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel2321.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel3.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel31.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel4.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel5.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel51.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel511.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel5111.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel5112.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel512.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hotel52.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inloggen.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jij.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/koopshop.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logout.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/muziek.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/s.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/shop.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stad.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/start.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/startgame.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/verkoopshop.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/wachtwoordvergeten.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winkel.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winkel1.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winkel11.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winkel111.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winkel1111.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winkel112.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winkel1121(1).php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winkel1121.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winkel12.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winkel121.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winkel1211.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winkel2.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winkeleigenaar.png" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,10 +445,32 @@
       <executable />
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1X0xD2aPyCMW56MKoOTaTJzWBo0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sources/img" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sources/img" />
+      <recent name="$PROJECT_DIR$/zombit_old/img" />
+      <recent name="$PROJECT_DIR$/sources/style" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/partials" />
+      <recent name="$PROJECT_DIR$/auth" />
+      <recent name="$PROJECT_DIR$/img" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -46,5 +500,19 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

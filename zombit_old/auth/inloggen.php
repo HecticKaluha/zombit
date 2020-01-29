@@ -1,6 +1,6 @@
 <div id="login">
 
-    <form action="./index.php?id=inloggen" method="post">
+    <form action="../../public/index.php" method="post">
         Log hier in<br/><br/><br/>
         Gebruikersnaam: <input class="lol" type="text" name="username" maxlength="20" size="20"/><br/><br/>
         Wachtwoord: <input class="lol" type="password" name="password" maxlength="20" size="20"/><br/>

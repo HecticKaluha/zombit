@@ -4,6 +4,6 @@
 </div>
 
 <div id="options" class="flex flex-column">
-    <a href="<?= URL ?>/index.php?id=211">Option 1 here</a>
-    <a href="<?= URL ?>/index.php?id=212">Option 2 here</a>
+    <a href="<?= URL ?>level/show/1">Option 1 here</a>
+    <a href="<?= URL ?>index.php?id=212">Option 2 here</a>
 </div>

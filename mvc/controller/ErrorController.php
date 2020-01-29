@@ -2,7 +2,7 @@
 
 function error_404_controller($data)
 {
-    $message = "404 - De controller " . $data . " is niet beschikbaar.";
+    $message = "404 - De controller " . $data["controller"] . " is niet beschikbaar.";
     render('view/partials/errors/404.', ["error" => true, "message" => $message]);
 }
 

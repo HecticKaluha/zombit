@@ -25,12 +25,11 @@
             <!--content goes here-->
 
             <?php
-                if($data["error"] != true){
-                    include(ROOT . '/mvc/view/partials/level_template.php');
-                }
-                else{
-                    printf($data['message']);
-                }
+            if (!isset($data["error"])) {
+                include(ROOT . '/mvc/view/partials/level_template.php');
+            } else {
+                printf($data['message']);
+            }
             ?>
 
             <!--content ends here-->

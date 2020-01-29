@@ -8,8 +8,8 @@ function route()
     // Als die niet bestaat, gaat hij de standaard controller inladen, welke in core.php is aangemaakt.
     // Hierna roept hij standaard de index functie aan.
     if (!$url['controller']) {
-        require(ROOT . 'mvc/controller/' . DEFAULT_CONTROLLER . 'Controller.php');
-        call_user_func('index');
+        require(ROOT . 'mvc/controller/' . DEFAULT_CONTROLLER . '.php');
+        call_user_func(array(__NAMESPACE__ .'\\'. DEFAULT_CONTROLLER,'index'));
         // Als dat niet het geval is, dus als er wel een controller is, kijkt hij of het bestand bestaat.
         //	Vervolgens laad hij dat bestand in
     } elseif (file_exists(ROOT . 'mvc/controller/' . $url['controller'] . '.php')) {
@@ -18,25 +18,25 @@ function route()
         // Bijvoorbeeld: http://localhost/Students/Edit/1, dan is de action Edit.
         // De 1 wordt als eerste 'params' geplaatst
         // In de controller Students wordt gekeken of de function Edit bestaat.
-        if (function_exists($url['action'])) {
+        if (method_exists($url['controller'] , $url['action'])) {
             // Wanneer die bestaat wordt er gekeken of je parameters hebt meegegeven bestaan. Als die bestaan worden die aan de functie meegegeven
             if ($url['params']) {
-                call_user_func_array($url['action'], $url['params']);
+                call_user_func_array(array(__NAMESPACE__ .'\\'. $url['controller'], $url['action']),  array($url['params']));
             } else {
                 // Als ze niet bestaan, wordt alleen de functie uitgevoerd
-                call_user_func($url['action']);
+                call_user_func([__NAMESPACE__ .'\\'. $url['controller'], $url['action']]);
             }
         } else {
             // Wanneer de action niet bestaat, wordt de errorpagina getoond
 //            call_user_func('index');
 
             require(ROOT . 'mvc/controller/ErrorController.php');
-            call_user_func_array('error_404_action', [["controller" => $url['controller'], "action" => $url['action']]]);
+            call_user_func_array('error_404_action', array(["controller" => $url['controller'], "action" => $url['action']]));
         }
     } else {
         // Wanneer de controller niet bestaat, wordt de errorpagina getoond
         require(ROOT . 'mvc/controller/ErrorController.php');
-        call_user_func_array('error_404_controller', [$url['controller']]);
+        call_user_func_array('error_404_controller', array(["controller" => $url['controller']]));
     }
 }
 

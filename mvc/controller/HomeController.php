@@ -3,7 +3,7 @@ require(ROOT . "mvc/model/Model_User.php");
 
 class HomeController{
 
-    public static function index()
+    static function index()
     {
         //1. Haal alle medewerkers op uit de database (via de model) en sla deze op in een variable
 //    $users = getAllUsers();

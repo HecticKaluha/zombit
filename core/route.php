@@ -1,5 +1,7 @@
 <?php
 // Met de route functie wordt bepaald welke controller en welke action er moet worden ingeladen
+require(ROOT . 'mvc/controller/ErrorController.php');
+
 function route()
 {
     // Hier wordt de functie aangeroepen die de URL op splitst op het standaard seperatie teken (in PHP is dit een /)
@@ -9,7 +11,7 @@ function route()
     // Hierna roept hij standaard de index functie aan.
     if (!$url['controller']) {
         require(ROOT . 'mvc/controller/' . DEFAULT_CONTROLLER . '.php');
-        call_user_func(array(__NAMESPACE__ .'\\'. DEFAULT_CONTROLLER,'index'));
+        call_user_func(array(__NAMESPACE__ . '\\' . DEFAULT_CONTROLLER, 'index'));
         // Als dat niet het geval is, dus als er wel een controller is, kijkt hij of het bestand bestaat.
         //	Vervolgens laad hij dat bestand in
     } elseif (file_exists(ROOT . 'mvc/controller/' . $url['controller'] . '.php')) {
@@ -18,25 +20,26 @@ function route()
         // Bijvoorbeeld: http://localhost/Students/Edit/1, dan is de action Edit.
         // De 1 wordt als eerste 'params' geplaatst
         // In de controller Students wordt gekeken of de function Edit bestaat.
-        if (method_exists($url['controller'] , $url['action'])) {
+        if (method_exists($url['controller'], $url['action'])) {
             // Wanneer die bestaat wordt er gekeken of je parameters hebt meegegeven bestaan. Als die bestaan worden die aan de functie meegegeven
             if ($url['params']) {
-                call_user_func_array(array(__NAMESPACE__ .'\\'. $url['controller'], $url['action']),  array($url['params']));
+                call_user_func_array(array(__NAMESPACE__ . '\\' . $url['controller'], $url['action']), array($url['params']));
             } else {
                 // Als ze niet bestaan, wordt alleen de functie uitgevoerd
-                call_user_func([__NAMESPACE__ .'\\'. $url['controller'], $url['action']]);
+                try {
+                    call_user_func([__NAMESPACE__ . '\\' . $url['controller'], $url['action']]);
+                    //wanneer de functie wel parameters accepteerd, maar deze niet zijn meegegeven, dan wordt er een error weergegeven
+                } catch (ArgumentCountError $e) {
+                    call_user_func_array(array(__NAMESPACE__ . '\ErrorController', 'error_incorrect_parameter_count'), array(["controller" => $url['controller'], "action" => $url['action']]));
+                }
             }
         } else {
             // Wanneer de action niet bestaat, wordt de errorpagina getoond
-//            call_user_func('index');
-
-            require(ROOT . 'mvc/controller/ErrorController.php');
-            call_user_func_array('error_404_action', array(["controller" => $url['controller'], "action" => $url['action']]));
+            call_user_func_array(array(__NAMESPACE__ . '\ErrorController', 'error_404_action'), array(["controller" => $url['controller'], "action" => $url['action']]));
         }
     } else {
         // Wanneer de controller niet bestaat, wordt de errorpagina getoond
-        require(ROOT . 'mvc/controller/ErrorController.php');
-        call_user_func_array('error_404_controller', array(["controller" => $url['controller']]));
+        call_user_func_array(array(__NAMESPACE__ . '\ErrorController', 'error_404_controller'), array(["controller" => $url['controller']]));
     }
 }
 

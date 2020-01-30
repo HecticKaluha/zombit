@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b740cd1-ff4d-461e-b869-94c6ecb43b50" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/core.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/core.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/route.php" beforeDir="false" afterPath="$PROJECT_DIR$/core/route.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/controller/ErrorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controller/ErrorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/model/Model_User.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/model/Model_User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvc/view/master.php" beforeDir="false" afterPath="$PROJECT_DIR$/mvc/view/master.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

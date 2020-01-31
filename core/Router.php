@@ -50,16 +50,19 @@ class Router{
                         call_user_func([__NAMESPACE__ . '\\' . $url['controller'], $url['action']]);
                         //wanneer de functie wel parameters accepteerd, maar deze niet zijn meegegeven, dan wordt er een error weergegeven
                     } catch (ArgumentCountError $e) {
-                        call_user_func_array(array(__NAMESPACE__ . '\ErrorController', 'error_incorrect_parameter_count'), array(["controller" => $url['controller'], "action" => $url['action']]));
+                        ErrorController::error_incorrect_parameter_count($url['controller'], $url['action']);
+//                        call_user_func_array(array(__NAMESPACE__ . '\ErrorController', 'error_incorrect_parameter_count'), array(["controller" => $url['controller'], "action" => $url['action']]));
                     }
                 }
             } else {
                 // Wanneer de action niet bestaat, wordt de errorpagina getoond
-                call_user_func_array(array(__NAMESPACE__ . '\ErrorController', 'error_404_action'), array(["controller" => $url['controller'], "action" => $url['action']]));
+                ErrorController::error_404_action($url['controller'], $url['action']);
+//                call_user_func_array(array(__NAMESPACE__ . '\ErrorController', 'error_404_action'), array(["controller" => $url['controller'], "action" => $url['action']]));
             }
         } else {
             // Wanneer de controller niet bestaat, wordt de errorpagina getoond
-            call_user_func_array(array(__NAMESPACE__ . '\ErrorController', 'error_404_controller'), array(["controller" => $url['controller']]));
+            ErrorController::error_404_controller($url['controller']);
+//            call_user_func_array(array(__NAMESPACE__ . '\ErrorController', 'error_404_controller'), array(["controller" => $url['controller']]));
         }
     }
 

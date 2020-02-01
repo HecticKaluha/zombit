@@ -2,11 +2,10 @@
 
 class Model_User extends RedBean_SimpleModel
 {
-    function getAllUsers()
+    static function getAllUsers()
     {
         $result = null;
         try {
-
 
         } catch (Exception $e) {
 
@@ -16,18 +15,9 @@ class Model_User extends RedBean_SimpleModel
         return $result;
     }
 
-    function getUser($id)
+    static function getUser($id)
     {
-        $result = null;
-        try {
-
-
-        } catch (Exception $e) {
-
-        } finally {
-            $conn = null;
-        }
-        return $result;
+        return R::load('user', $id);
     }
 
     function storeUser($data)
@@ -43,10 +33,6 @@ class Model_User extends RedBean_SimpleModel
     function destroyUser($id)
     {
         // Maak hier de code om een medewerker te verwijderen
-    }
-
-    public static function find($id){
-        return R::load('user', $id);
     }
 }
 

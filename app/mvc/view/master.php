@@ -25,10 +25,10 @@
             <!--content goes here-->
 
             <?php
-            if (!isset($data["error"])) {
-                include(ROOT . '/mvc/view/partials/level_template.php');
+            if (!isset($error)) {
+                include(ROOT . 'app/mvc/view/partials/level_template.php');
             } else {
-                printf($data['message']);
+                printf($message);
             }
             ?>
 

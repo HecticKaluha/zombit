@@ -1,21 +1,18 @@
 <?php
-require(ROOT . "mvc/model/Model_User.php");
-
 class UserController{
     static function index()
     {
-        //1. Haal alle medewerkers op uit de database (via de model) en sla deze op in een variable
         $users = [];
-        //2. Geef een view weer en geef de variable met medewerkers hieraan mee
-        render('mvc/view/master.php', $users);
+        Core::render('app/mvc/view/master.php', $users);
     }
 
     static function show($params){
-        $user = MODEL_USER::find($params[0]);
-        //1. Haal alle medewerkers op uit de database (via de model) en sla deze op in een variable
-//    $users = getAllUsers();
-        //2. Geef een view weer en geef de variable met medewerkers hieraan mee
-        render('mvc/view/master.php', ["data" => $user]);
+        $user = Model_User::getUser($params[0]);
+        if($user->id != 0){
+            Core::render('app/mvc/view/master.php', ["data" => $user]);
+        } else{
+            ErrorController::error_user_not_found($params[0]);
+        }
     }
 
     static function create(){

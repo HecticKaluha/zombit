@@ -1,41 +1,22 @@
 <?php
 // Met de route functie wordt bepaald welke controller en welke action er moet worden ingeladen
-require(ROOT . 'mvc/controller/ErrorController.php');
+require(ROOT . 'app/mvc/controller/ErrorController.php');
 
 class Router{
-    private static $instance = null;
-
-//    private function __construct()
-//    {
-//
-//    }
-
-    // The object is created from within the class itself
-    // only if the class has no instance.
-    public static function getInstance()
-    {
-        if (self::$instance == null)
-        {
-            self::$instance = new Router();
-        }
-
-        return self::$instance;
-    }
-
-    function route()
+    static function route()
     {
         // Hier wordt de functie aangeroepen die de URL op splitst op het standaard seperatie teken (in PHP is dit een /)
-        $url = $this::splitUrl();
+        $url = Router::splitUrl();
         // Er wordt een variable opgemaakt uit de URL, de eerste variabele wordt geplaatst in de key controller, de tweede wordt in de key action geplaatst. De overige worden in params geplaatst (als array)
-        // Als die niet bestaat, gaat hij de standaard controller inladen, welke in core.php is aangemaakt.
+        // Als die niet bestaat, gaat hij de standaard controller inladen, welke in Core.php is aangemaakt.
         // Hierna roept hij standaard de index functie aan.
         if (!$url['controller']) {
-            require(ROOT . 'mvc/controller/' . DEFAULT_CONTROLLER . '.php');
+            require(ROOT . '/app/mvc/controller/' . DEFAULT_CONTROLLER . '.php');
             call_user_func(array(__NAMESPACE__ . '\\' . DEFAULT_CONTROLLER, 'index'));
             // Als dat niet het geval is, dus als er wel een controller is, kijkt hij of het bestand bestaat.
             //	Vervolgens laad hij dat bestand in
-        } elseif (file_exists(ROOT . 'mvc/controller/' . $url['controller'] . '.php')) {
-            require(ROOT . 'mvc/controller/' . $url['controller'] . '.php');
+        } elseif (file_exists(ROOT . 'app/mvc/controller/' . $url['controller'] . '.php')) {
+            require(ROOT . '/app/mvc/controller/' . $url['controller'] . '.php');
             // Vervolgens wordt er gekeken of er een functie met de naam bestaat die in de key action zit.
             // Bijvoorbeeld: http://localhost/Students/Edit/1, dan is de action Edit.
             // De 1 wordt als eerste 'params' geplaatst
@@ -66,7 +47,7 @@ class Router{
         }
     }
 
-    function splitUrl()
+    static function splitUrl()
     {
         // Als er iets in de key url zit van $_GET, wordt de code uitgevoerd
         if (isset($_GET['url'])) {

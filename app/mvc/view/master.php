@@ -23,15 +23,9 @@
 
         <div id="story" class="flex flex-column">
             <!--content goes here-->
-
             <?php
-            if (!isset($error)) {
-                include(ROOT . 'app/mvc/view/partials/level_template.php');
-            } else {
-                printf($message);
-            }
+                include(ROOT . $filename);
             ?>
-
             <!--content ends here-->
         </div>
 

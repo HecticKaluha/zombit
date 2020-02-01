@@ -1,1 +1,1 @@
-<div><p><?=$data['$message']?></p></div>
+<div><p><?= $message ?></p></div>

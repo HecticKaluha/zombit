@@ -5,9 +5,6 @@ class HomeController{
 
     static function index()
     {
-        //1. Haal alle medewerkers op uit de database (via de model) en sla deze op in een variable
-//    $users = getAllUsers();
-        //2. Geef een view weer en geef de variable met medewerkers hieraan mee
-        render('app/mvc/view/master.php');
+        Core::render('app/mvc/view/partials/home.php');
     }
 }

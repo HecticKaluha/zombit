@@ -3,13 +3,13 @@ class UserController{
     static function index()
     {
         $users = [];
-        Core::render('app/mvc/view/master.php', $users);
+        Core::render('app/mvc/view/partials/user/index.php', ['users' => $users]);
     }
 
     static function show($params){
         $user = Model_User::getUser($params[0]);
         if($user->id != 0){
-            Core::render('app/mvc/view/master.php', ["data" => $user]);
+            Core::render('app/mvc/view/partials/user/show.php', ["user" => $user]);
         } else{
             ErrorController::error_user_not_found($params[0]);
         }

@@ -6,12 +6,12 @@ class LevelController{
         //change to Model_LEvel
         $levels = Model_User::getAllUsers();
         //2. Geef een view weer en geef de variable met medewerkers hieraan mee
-        Core::render('mvc/view/master.php', $levels);
+        Core::render('app/mvc/view/partials/level/level_template.php', $levels);
     }
 
     static function show($params){
         $level = Model_User::getUser($params[0]);
-        Core::render('mvc/view/master.php', $level);
+        Core::render('app/mvc/view/partials/level/level_template.php', $level);
     }
 
     function create(){

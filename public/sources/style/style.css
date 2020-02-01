@@ -72,16 +72,28 @@ body {
 	margin-bottom:1.3rem;
 
 }
-#description > p {
+#description p{
 	margin:0.3rem 0;
+	word-break: break-word;
+}
+
+#description{
+	flex-flow: row wrap;
 }
 #options > a {
 	margin:0.1rem 0;
 }
 
 
+/* Resource page*/
+.resource > span{
+	flex:2;
+}
+.resource > span:last-of-type{
+	text-align: right;
+}
 
-
+/* Inlog */
 
 #inlog p {
 	display: inline;

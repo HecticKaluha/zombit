@@ -13,4 +13,43 @@ class Core{
 
         require(ROOT . 'app/mvc/view/master.php');
     }
+
+    static function validateRequest($post){
+        $data = $errors = null;
+        $valid = true;
+
+        foreach($post as $key => $value){
+            if($value){
+                $data[$key] = Core::clean_input($value);
+            }
+            else{
+                $data[$key] = Core::clean_input($value);
+                $errors[$key] = "Dit veld is verplicht!";
+                $valid = false;
+            }
+        }
+
+        if($valid){
+            return [
+                'valid' => true,
+                'data' => $data,
+                'errors' => $errors
+            ];
+        }
+        else{
+            return [
+                'valid' => false,
+                'data' => $data,
+                'errors' => $errors
+            ];
+        }
+    }
+
+    static function clean_input($data) {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
 }

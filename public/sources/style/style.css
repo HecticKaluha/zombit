@@ -15,6 +15,10 @@ body {
 	flex-flow:column nowrap;
 }
 
+.flex-between{
+	justify-content: space-between;
+}
+
 #version{
     margin: 0.3rem;
 }
@@ -85,13 +89,27 @@ body {
 }
 
 
+
+
 /* Resource page*/
-.resource > span{
-	flex:2;
+.resource-row > span{
+	flex:1;
 }
-.resource > span:last-of-type{
+.resource-row > span:last-of-type{
 	text-align: right;
 }
+
+
+
+/* register */
+.form-row > label, .form-row > input{
+	flex:1;
+}
+.form{
+	height:100%;
+}
+
+
 
 /* Inlog */
 

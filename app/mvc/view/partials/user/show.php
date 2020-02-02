@@ -2,7 +2,7 @@
     <div class="flex flex-column">
         <h3>Gebruiker</h3>
         <?php foreach ($user as $key => $value): ?>
-            <div class="flex flex-row resource">
+            <div class="flex flex-row resource-row">
                 <span><?= $key ?>:</span>&nbsp<span><?= $value ?></span>
             </div>
         <?php endforeach; ?>

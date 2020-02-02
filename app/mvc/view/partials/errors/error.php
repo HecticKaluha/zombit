@@ -1,1 +1,3 @@
-<div><p><?= $message ?></p></div>
+<div id="description" class="flex flex-row">
+    <?= $message ?>
+</div>

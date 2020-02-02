@@ -15,8 +15,13 @@ define('URL', URL_PROTOCOL . URL_DOMAIN . URL_SUB_FOLDER); // Dit genereerd de s
 
 define('DEFAULT_CONTROLLER', 'homeController');
 
-define('SOURCES', URL . URL_PUBLIC_FOLDER .'/sources/');
 
+define('SOURCES', URL . URL_PUBLIC_FOLDER .'/sources/');
 define('VIEW', URL .'app/mvc/view/');
-define('PARTIALS', URL .'app/mvc/view/partials/');
+define('PARTIALS', 'app/mvc/view/partials/');
 define('CONTROLLER', URL .'app/mvc/controller/');
+
+define('CONTROLLER_PATH','app/mvc/controller/');
+
+//absolutes
+define('ABSOLUTE_CONTROLLER_URL', $_SERVER["DOCUMENT_ROOT"].URL_SUB_FOLDER.'app/mvc/controller');

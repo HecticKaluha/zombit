@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b740cd1-ff4d-461e-b869-94c6ecb43b50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/mvc/controller/auth/LoginController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/mvc/controller/auth/RegisterController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/mvc/view/partials/auth/forgotPassword.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/mvc/view/partials/auth/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/mvc/view/partials/auth/register.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Router.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/core/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/controller/auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/view/partials/errors/error.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/view/partials/errors/error.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

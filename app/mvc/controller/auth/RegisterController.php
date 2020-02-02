@@ -1,8 +1,12 @@
 <?php
 class RegisterController{
 
+    static function index(){
+        Core::render(PARTIALS . 'auth/register.php');
+    }
+
     static function create(){
-        Core::render(PARTIALS . '/auth/register.php');
+        Core::render(PARTIALS . 'auth/register.php');
     }
 
     static function store(){

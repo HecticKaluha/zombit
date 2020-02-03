@@ -21,4 +21,9 @@ class ErrorController{
         $message = "De opgevraagde gebruiker (id = $id) is niet in de database gevonden";
         Core::render('app/mvc/view/partials/errors/error.php', ["error" => true, "message" => $message]);
     }
+
+    static function error_incomplete_validation_ruleset($notFound, $type){
+        $message = "Key(s) ".implode(", ", $notFound) ." niet gevonden in de ruleset van Model_".ucfirst($type);
+        Core::render('app/mvc/view/partials/errors/error.php', ["error" => true, "message" => $message]);
+    }
 }

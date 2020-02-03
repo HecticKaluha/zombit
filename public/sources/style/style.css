@@ -109,6 +109,14 @@ body {
 	height:100%;
 }
 
+.errors > p{
+	color:red;
+	font-weight:bold;
+	margin:0.3rem 0;
+}
+.required{
+	color:red;
+}
 
 
 /* Inlog */

@@ -3,6 +3,7 @@
     "psr-4": {
       "": [
         "app/mvc/controller",
+        "app/mvc/controller/auth",
         "app/mvc/model",
         "app/core/",
         "packages/RedBeanPHP5_4_2"

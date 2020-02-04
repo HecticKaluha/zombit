@@ -1,9 +1,7 @@
 <?php
-// Met de route functie wordt bepaald welke controller en welke action er moet worden ingeladen
-require(ROOT . 'app/mvc/controller/ErrorController.php');
-
 class Router
 {
+    // Met de route functie wordt bepaald welke controller en welke action er moet worden ingeladen
     static function route()
     {
         // Hier wordt de functie aangeroepen die de URL op splitst op het standaard seperatie teken (in PHP is dit een /)
@@ -12,7 +10,6 @@ class Router
         // Als die niet bestaat, gaat hij de standaard controller inladen, welke in Core.php is aangemaakt.
         // Hierna roept hij standaard de index functie aan.
         if (!$url['controller']) {
-            require(ROOT . '/app/mvc/controller/' . DEFAULT_CONTROLLER . '.php');
             call_user_func(array(__NAMESPACE__ . '\\' . DEFAULT_CONTROLLER, 'index'));
         }
         //wanneer we de controller moeten zoeken
@@ -34,7 +31,6 @@ class Router
             }
             //if file is found in controller folder (recursively), call the functions on it
             if ($found_file) {
-                require(ROOT . CONTROLLER_PATH . $found_file);
                 // Vervolgens wordt er gekeken of er een functie met de naam bestaat die in de key action zit.
                 // Bijvoorbeeld: http://localhost/Students/Edit/1, dan is de action Edit.
                 // De 1 wordt als eerste 'params' geplaatst

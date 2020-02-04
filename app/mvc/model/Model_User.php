@@ -3,9 +3,9 @@
 class Model_User extends  Model
 {
     private static $createRules = [
-        "email" => 'required,unique',
-        "username" => 'required',
-        "password" => 'required',
+        "email" => 'required,unique,min:3,email',
+        "username" => 'required,min:3',
+        "password" => 'required,min:8',
         "confirm_password" => "required"
     ];
     private static $type = 'user';

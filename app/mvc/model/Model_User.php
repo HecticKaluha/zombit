@@ -1,6 +1,6 @@
 <?php
 
-class Model_User extends RedBean_SimpleModel
+class Model_User extends  Model
 {
     private static $createRules = [
         "email" => 'required,unique',
@@ -8,7 +8,7 @@ class Model_User extends RedBean_SimpleModel
         "password" => 'required',
         "confirm_password" => "required"
     ];
-
+    private static $type = 'user';
 
     static function getAllUsers()
     {
@@ -28,9 +28,19 @@ class Model_User extends RedBean_SimpleModel
         return R::load('user', $id);
     }
 
-    function storeUser($data)
+    static function store($data)
     {
-        // Maak hier de code om een medewerker toe te voegen
+        $validated = parent::validateRequest(self::$type, self::$createRules, $data);
+        if($validated['valid']){
+            $user = R::dispense(self::$type);
+            $user->email = $data['email'];
+            $user->username = $data['username'];
+            $user->password = $data['username'];
+            $id = R::store($user);
+            return $user;
+        } else{
+            return $validated;
+        }
     }
 
     function patchUser($data)
@@ -43,8 +53,26 @@ class Model_User extends RedBean_SimpleModel
         // Maak hier de code om een medewerker te verwijderen
     }
 
-    static function validateCreate($data){
-        return Core::validateRequest('user', Model_User::$createRules, $data);
+    /**
+     * @return array
+     */
+    public static function getCreateRules()
+    {
+        return self::$createRules;
     }
+
+    /**
+     * @return string
+     */
+    public static function getType()
+    {
+        return self::$type;
+    }
+
+    static function test(){
+        return "gelukt";
+    }
+
+
 }
 

@@ -6,5 +6,5 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    '' => array($baseDir . '/app/mvc/controller', $baseDir . '/app/mvc/controller/auth', $baseDir . '/app/mvc/model', $baseDir . '/app/core', $baseDir . '/packages/RedBeanPHP5_4_2'),
+    '' => array($baseDir . '/app/mvc/controller', $baseDir . '/app/mvc/controller/auth', $baseDir . '/app/mvc/request', $baseDir . '/app/mvc/model', $baseDir . '/app/core', $baseDir . '/packages/RedBeanPHP5_4_2'),
 );

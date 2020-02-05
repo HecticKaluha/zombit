@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b740cd1-ff4d-461e-b869-94c6ecb43b50" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/mvc/request/CreateUserRequest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/mvc/request/Request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Zombit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Zombit.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/controller/auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/model/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/model/Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/model/Model_User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/model/Model_User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
@@ -14,13 +20,19 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+    </include_path>
   </component>
   <component name="ProjectId" id="1X0xD2aPyCMW56MKoOTaTJzWBo0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -30,24 +42,24 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/mvc/view/partials/user" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/mvc/view/partials/user" />
-      <recent name="$PROJECT_DIR$/sources/img" />
-      <recent name="$PROJECT_DIR$/zombit_old/img" />
-      <recent name="$PROJECT_DIR$/sources/style" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/mvc/view/partials/level" />
       <recent name="$PROJECT_DIR$/app/mvc/view/partials/user" />
       <recent name="$PROJECT_DIR$/packages/RedBeanPHP5_4_2" />
       <recent name="$PROJECT_DIR$/packages" />
       <recent name="$PROJECT_DIR$/app" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/mvc/view/partials/user" />
+      <recent name="$PROJECT_DIR$/sources/img" />
+      <recent name="$PROJECT_DIR$/zombit_old/img" />
+      <recent name="$PROJECT_DIR$/sources/style" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -73,6 +85,7 @@
       <option name="presentableId" value="Default" />
       <updated>1580196689212</updated>
       <workItem from="1580196690338" duration="9923000" />
+      <workItem from="1580904480377" duration="4738000" />
     </task>
     <servers />
   </component>
@@ -84,7 +97,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

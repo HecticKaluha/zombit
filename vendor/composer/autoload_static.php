@@ -9,9 +9,10 @@ class ComposerStaticInit7c3fd93e939ffc4c0b8227f932c93151
     public static $fallbackDirsPsr4 = array (
         0 => __DIR__ . '/../..' . '/app/mvc/controller',
         1 => __DIR__ . '/../..' . '/app/mvc/controller/auth',
-        2 => __DIR__ . '/../..' . '/app/mvc/model',
-        3 => __DIR__ . '/../..' . '/app/core',
-        4 => __DIR__ . '/../..' . '/packages/RedBeanPHP5_4_2',
+        2 => __DIR__ . '/../..' . '/app/mvc/request',
+        3 => __DIR__ . '/../..' . '/app/mvc/model',
+        4 => __DIR__ . '/../..' . '/app/core',
+        5 => __DIR__ . '/../..' . '/packages/RedBeanPHP5_4_2',
     );
 
     public static function getInitializer(ClassLoader $loader)

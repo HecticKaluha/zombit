@@ -2,13 +2,7 @@
 
 class Model_User extends  Model
 {
-    private static $createRules = [
-        "email" => 'required,unique,min:3,email',
-        "username" => 'required,min:3',
-        "password" => 'required,min:8',
-        "confirm_password" => "required"
-    ];
-    private static $type = 'user';
+    protected static $type = 'user';
 
     static function getAllUsers()
     {
@@ -30,17 +24,12 @@ class Model_User extends  Model
 
     static function store($data)
     {
-        $validated = parent::validateRequest(self::$type, self::$createRules, $data);
-        if($validated['valid']){
-            $user = R::dispense(self::$type);
-            $user->email = $data['email'];
-            $user->username = $data['username'];
-            $user->password = $data['username'];
-            $id = R::store($user);
-            return $user;
-        } else{
-            return $validated;
-        }
+        $user = R::dispense(self::$type);
+        $user->email = $data['email'];
+        $user->username = $data['username'];
+        $user->password = $data['username'];
+        $id = R::store($user);
+        return $user;
     }
 
     function patchUser($data)

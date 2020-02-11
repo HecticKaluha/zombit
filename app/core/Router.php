@@ -2,10 +2,10 @@
 class Router
 {
     // Met de route functie wordt bepaald welke controller en welke action er moet worden ingeladen
-    static function route()
+    function route()
     {
         // Hier wordt de functie aangeroepen die de URL op splitst op het standaard seperatie teken (in PHP is dit een /)
-        $url = Router::splitUrl();
+        $url = $this->splitUrl();
         // Er wordt een variable opgemaakt uit de URL, de eerste variabele wordt geplaatst in de key controller, de tweede wordt in de key action geplaatst. De overige worden in params geplaatst (als array)
         // Als die niet bestaat, gaat hij de standaard controller inladen, welke in Core.php is aangemaakt.
         // Hierna roept hij standaard de index functie aan.
@@ -60,7 +60,7 @@ class Router
         }
     }
 
-    static function splitUrl()
+    function splitUrl()
     {
         // Als er iets in de key url zit van $_GET, wordt de code uitgevoerd
         if (isset($_GET['url'])) {

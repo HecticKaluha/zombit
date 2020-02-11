@@ -18,7 +18,9 @@ body {
 .flex-between{
 	justify-content: space-between;
 }
-
+.flex-1{
+	flex:1;
+}
 #version{
     margin: 0.3rem;
 }
@@ -49,8 +51,6 @@ body {
 	padding:0.6rem;
 	width: 360px;
 	height: 300px;
-
-	justify-content: space-between;
 }
 
 #left, #right{
@@ -159,4 +159,7 @@ a:active {
 	text-decoration: underline;
 	color: #787878;
 }
-
+.message{
+	color:orange;
+	border-bottom: 1px solid grey;
+}

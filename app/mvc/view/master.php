@@ -1,6 +1,3 @@
-<?php
-//session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,10 +19,18 @@
         <div id="left"></div>
 
         <div id="story" class="flex flex-column">
-            <!--content goes here-->
             <?php
-                include(ROOT . $filename);
+            if (isset($_SESSION['message'])) {
+                printf('<div class="message"> %s </div><hr>', $_SESSION['message'] );
+                unset( $_SESSION['message']);
+            }
             ?>
+            <!--content goes here-->
+            <div class="flex flex-column flex-between flex-1">
+                <?php
+                    include(ROOT . $filename);
+                ?>
+            </div>
             <!--content ends here-->
         </div>
 

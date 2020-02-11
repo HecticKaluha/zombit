@@ -2,17 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b740cd1-ff4d-461e-b869-94c6ecb43b50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/mvc/request/CreateUserRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/mvc/request/Request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Zombit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Zombit.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Router.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mvc/controller/auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/model/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/model/Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/model/Model_User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/model/Model_User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/view/master.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/view/master.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/view/partials/auth/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/view/partials/auth/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sources/style/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/sources/style/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +16,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -85,7 +81,10 @@
       <option name="presentableId" value="Default" />
       <updated>1580196689212</updated>
       <workItem from="1580196690338" duration="9923000" />
-      <workItem from="1580904480377" duration="4738000" />
+      <workItem from="1580904480377" duration="7367000" />
+      <workItem from="1581173271735" duration="232000" />
+      <workItem from="1581184245354" duration="5275000" />
+      <workItem from="1581419689456" duration="3325000" />
     </task>
     <servers />
   </component>

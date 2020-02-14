@@ -15,15 +15,14 @@ class RegisterController
     static function store()
     {
         $request = new CreateUserRequest($_POST);
+        $data = $request->getData();
         if($request->isValid()){
             $user = Model_User::store($request->getData());
             $_SESSION['message'] = "Account $user->username succesvol aangemaakt.";
-
-
             Core::render(PARTIALS . 'auth/login.php', array('user' => $user));
         }
         else {
-            Core::render(PARTIALS . 'auth/register.php', array('data' => $request->getData(), 'errors' => $request->getErrors()));
+            Core::render(PARTIALS . 'auth/register.php', array('data' => $data, 'errors' => $request->getErrors()));
         }
     }
 

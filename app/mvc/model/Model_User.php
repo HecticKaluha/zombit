@@ -27,7 +27,7 @@ class Model_User extends  Model
         $user = R::dispense(self::$type);
         $user->email = $data['email'];
         $user->username = $data['username'];
-        $user->password = $data['username'];
+        $user->password = PASSWORD_HASH($data['password'], PASSWORD_BCRYPT);
         $id = R::store($user);
         return $user;
     }

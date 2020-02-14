@@ -1,8 +1,21 @@
 <?php
 class LoginController{
+    static function index(){
+        Core::render(PARTIALS . 'auth/login.php');
+    }
 
     static function login(){
-        Core::render(PARTIALS . 'auth/login.php');
+        $request = new LoginUserRequest($_POST);
+        $data = $request->getData();
+        if($request->isValid()){
+            //find user when email and password match
+            $user = Model_User::login($data);
+            $_SESSION['message'] = "Succesvol ingelogd.";
+            Core::render(PARTIALS . 'auth/login.php', array('user' => $user));
+        }
+        else {
+            Core::render(PARTIALS . 'auth/login.php', array('data' => $data, 'errors' => $request->getErrors()));
+        }
     }
 
     static function logOut(){

@@ -3,6 +3,7 @@
 class Model_User extends  Model
 {
     protected static $type = 'user';
+    private $email = "tets";
 
     static function getAllUsers()
     {
@@ -58,7 +59,8 @@ class Model_User extends  Model
         return self::$type;
     }
 
-    static function test(){
+    static function login($data){
+
         return "gelukt";
     }
 

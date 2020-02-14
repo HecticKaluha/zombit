@@ -48,5 +48,5 @@
 
 
     <input type="submit" value="Account aanmaken"/>
-    <a class="small" href='<?= URL ?>login/login'>Terug naar inloggen</a>
+    <a class="small" href='<?= URL ?>login/'>Terug naar inloggen</a>
 </form>

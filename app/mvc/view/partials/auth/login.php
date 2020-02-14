@@ -1,8 +1,8 @@
-<form class="flex flex-column flex-between form" action="<?= URL ?>register/store" method="post">
+<form class="flex flex-column flex-between form" action="<?= URL ?>login/login" method="post">
     <div class="flex flex-column flex-1 flex-center">
         <div class="flex flex-column">
             <div class="flex flex-row form-row">
-                <label for="email">Email: </label><input type="email" name="email" id="email" value="<?= $data['email'] ?>"><span class="required">*</span>
+                <label for="email">Email: </label><input type="email" name="email" id="email" value="<?=  isset($user->email) ? $user->email : $data['email'] ?>"><span class="required">*</span>
             </div>
             <?php if (!empty($errors['email'])): ?>
                 <div class="errors">
@@ -23,7 +23,7 @@
         </div>
         <div class="flex flex-row flex-evenly mt-1">
             <a class="small" href='<?= URL ?>register/create'> Registreer</a>
-            <a class="small" href='<?= URL ?>login/login'> Wachtwoord vergeten?</a>
+            <a class="small" href='<?= URL ?>login/'> Wachtwoord vergeten?</a>
         </div>
 
 

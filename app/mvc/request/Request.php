@@ -26,11 +26,20 @@ class Request
                                 $valid = false;
                             }
                             break;
-                        case $rule === "unique":
+                        case $rule === 'unique':
                             if ($value) {
                                 $bean = R::findOne($type, "$key = ?", array($value));
+                                array_push($errors[$key], "Deze $key bestaat al in de database");
                                 if ($bean != null) {
-                                    array_push($errors[$key], "Deze $key bestaat al in de database");
+                                    $valid = false;
+                                }
+                            }
+                            break;
+                        case $rule === 'exists':
+                            if ($value) {
+                                $bean = R::findOne($type, "$key = ?", array($value));
+                                if ($bean == null) {
+                                    array_push($errors[$key], "Deze $key is niet gevonden in de database");
                                     $valid = false;
                                 }
                             }

@@ -5,6 +5,8 @@ body {
     font-size:16px;
 	box-sizing: border-box;
 }
+
+/* Flex */
 .flex{
 	display:flex;
 }
@@ -18,8 +20,18 @@ body {
 .flex-between{
 	justify-content: space-between;
 }
+.flex-around{
+	justify-content: space-around;
+}
+.flex-evenly{
+	justify-content: space-evenly;
+}
 .flex-1{
 	flex:1;
+}
+.flex-center{
+	justify-content: center;
+
 }
 #version{
     margin: 0.3rem;
@@ -88,9 +100,6 @@ body {
 	margin:0.1rem 0;
 }
 
-
-
-
 /* Resource page*/
 .resource-row > span{
 	flex:1;
@@ -98,8 +107,6 @@ body {
 .resource-row > span:last-of-type{
 	text-align: right;
 }
-
-
 
 /* register */
 .form-row > label, .form-row > input{
@@ -162,4 +169,14 @@ a:active {
 .message{
 	color:orange;
 	border-bottom: 1px solid grey;
+}
+
+
+/* General*/
+.small{
+	font-size: 0.7rem;
+}
+
+.mt-1{
+	margin-top: 1rem;
 }

@@ -29,9 +29,9 @@ class Request
                         case $rule === 'unique':
                             if ($value) {
                                 $bean = R::findOne($type, "$key = ?", array($value));
-                                array_push($errors[$key], "Deze $key bestaat al in de database");
                                 if ($bean != null) {
                                     $valid = false;
+                                    array_push($errors[$key], "Deze $key bestaat al in de database");
                                 }
                             }
                             break;

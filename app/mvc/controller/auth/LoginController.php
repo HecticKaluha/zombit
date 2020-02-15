@@ -8,7 +8,8 @@ class LoginController{
         $request = new LoginUserRequest($_POST);
         $data = $request->getData();
         if($request->isValid()){
-            //find user when email and password match
+            var_dump('Aangekomen');
+            die();
             $user = Model_User::login($data);
             $_SESSION['message'] = "Succesvol ingelogd.";
             Core::render(PARTIALS . 'auth/login.php', array('user' => $user));

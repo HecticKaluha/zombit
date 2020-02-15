@@ -8,8 +8,8 @@ class LoginUserRequest extends Request
         "password" => 'required',
     ];
 
-    private $errors = null;
-    private $data = null;
+    private $errors = array();
+    private $data = array();
     private $valid = false;
 
     public function __construct($data)
@@ -17,13 +17,20 @@ class LoginUserRequest extends Request
         $this->validate($data);
     }
 
-    function validate($data){
+    function validate($data)
+    {
         $result = $this->validateRequest($this->type, $this->rules, $data);
         $this->valid = $result['valid'];
         $this->data = $result['data'];
-        //check if password matches account
-        if(!$this->valid){
+        if (!$this->valid) {
             $this->errors = $result['errors'];
+        }
+        else{
+            $bean = R::findOne($this->type, "email = ?", array($this->data['email']));
+            if(!PASSWORD_VERIFY($data['password'], $bean->password)) {
+                $this->valid = false;
+                $this->errors['password'] = array("Ongeldig wachtwoord");
+            }
         }
     }
 

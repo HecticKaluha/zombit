@@ -61,7 +61,6 @@ class Model_User extends  Model
 
     static function login($data){
 
-        return "gelukt";
     }
 
 

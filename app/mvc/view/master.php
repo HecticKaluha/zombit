@@ -21,7 +21,7 @@
         <div id="story" class="flex flex-column">
             <?php
             if (isset($_SESSION['message'])) {
-                printf('<div class="message"> %s </div><hr>', $_SESSION['message'] );
+                printf('<div class="message %s"> %s </div><hr>', $_SESSION['message']['type'], $_SESSION['message']['message'] );
                 unset( $_SESSION['message']);
             }
             ?>

@@ -25,13 +25,6 @@ class LoginUserRequest extends Request
         if (!$this->valid) {
             $this->errors = $result['errors'];
         }
-        else{
-            $bean = R::findOne($this->type, "email = ?", array($this->data['email']));
-            if(!PASSWORD_VERIFY($data['password'], $bean->password)) {
-                $this->valid = false;
-                $this->errors['password'] = array("Ongeldig wachtwoord");
-            }
-        }
     }
 
     /**

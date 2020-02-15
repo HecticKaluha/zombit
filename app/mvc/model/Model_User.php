@@ -60,7 +60,13 @@ class Model_User extends  Model
     }
 
     static function login($data){
-
+        $bean = R::findOne(self::$type, "email = ?", array($data['email']));
+        if(!PASSWORD_VERIFY($data['password'], $bean->password)) {
+            return false;
+        }
+        else{
+            return $bean;
+        }
     }
 
 

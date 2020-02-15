@@ -167,10 +167,20 @@ a:active {
 	color: #787878;
 }
 .message{
-	color:orange;
 	border-bottom: 1px solid grey;
 }
-
+.warning{
+	color:orange;
+}
+.error{
+	color:red;
+}
+.success{
+	color:green;
+}
+.info{
+	color:blue;
+}
 
 /* General*/
 .small{

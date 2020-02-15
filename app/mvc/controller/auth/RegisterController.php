@@ -18,7 +18,7 @@ class RegisterController
         $data = $request->getData();
         if($request->isValid()){
             $user = Model_User::store($data);
-            $_SESSION['message'] = "Account $user->username succesvol aangemaakt.";
+            $_SESSION['message'] = array("type"=>"success", "message" => "Account $user->username succesvol aangemaakt.");
             Core::render(PARTIALS . 'auth/login.php', array('user' => $user));
         }
         else {

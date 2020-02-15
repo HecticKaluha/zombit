@@ -11,7 +11,7 @@ class LoginController{
             if($user = Model_User::login($data)){
                 $_SESSION['user'] = $user;
                 $_SESSION['message'] = array("type" => "success", "message" => "Succesvol ingelogd.");
-                Core::render(PARTIALS . 'auth/login.php', array('user' => $user));
+                Core::render(PARTIALS . 'start/start.php', array('user' => $user));
             }
             else{
                 $errors = array("password" => array("Ongeldig wachtwoord"));

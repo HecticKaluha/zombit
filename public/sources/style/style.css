@@ -3,6 +3,7 @@ body {
 	padding: 0;
 	font-family: 'Courier New', sans-serif;
     font-size:16px;
+	line-height:1rem;
 	box-sizing: border-box;
 }
 
@@ -91,6 +92,9 @@ body {
 }
 
 /* content in panel */
+#panel{
+	height:100%;
+}
 #options{
 	margin-bottom:1.3rem;
 
@@ -99,13 +103,22 @@ body {
 	margin:0.3rem 0;
 	word-break: break-word;
 }
-
-#description{
-	overflow:auto;
-	flex:1;
+.scrollable{
+	overflow-y:auto;
+	-ms-overflow-style: none;
+}
+.scrollable::-webkit-scrollbar{
+	display: none;
+}
+#description, #options{
+	flex-basis:auto;
 }
 #options > a {
 	margin:0.1rem 0;
+	font-size:1rem;
+}
+#options{
+	min-height:1rem;
 }
 
 /* Resource page*/
@@ -130,11 +143,8 @@ body {
 	margin:0.3rem 0;
 	font-size:0.7rem;
 }
-.required{
-	color:red;
-}
 
-/* deafults */
+/* defaults */
 a:link, a:visited {
 	text-decoration: none;
 	color: #787878;
@@ -164,12 +174,10 @@ a:active {
 .info{
 	color:blue;
 }
-
 /* General*/
 .small{
 	font-size: 0.7rem;
 }
-
 .mt-1{
 	margin-top: 1rem;
 }

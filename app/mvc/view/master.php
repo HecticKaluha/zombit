@@ -26,7 +26,7 @@
             }
             ?>
             <!--content goes here-->
-            <div class="flex flex-column flex-between flex-1">
+            <div id="panel" class="flex flex-column flex-between flex-1">
                 <?php
                     include(ROOT . $filename);
                 ?>

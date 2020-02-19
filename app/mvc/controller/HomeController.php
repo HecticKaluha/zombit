@@ -5,6 +5,6 @@ class HomeController{
 
     static function index()
     {
-        Core::render('app/mvc/view/partials/home.php');
+        Core::render(PARTIALS .'/home.php');
     }
 }

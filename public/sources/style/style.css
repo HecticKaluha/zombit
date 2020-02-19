@@ -101,7 +101,8 @@ body {
 }
 
 #description{
-	flex-flow: row wrap;
+	overflow:auto;
+	flex:1;
 }
 #options > a {
 	margin:0.1rem 0;

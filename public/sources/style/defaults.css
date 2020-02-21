@@ -1,6 +1,7 @@
+/* scrollbar */
 /* width */
 ::-webkit-scrollbar {
-	width: 5px;
+	width: 2px;
 }
 
 /* Track */
@@ -11,9 +12,80 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
 	background: #888;
+	border-radius:1px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 	background: #555;
+}
+
+/* defaults */
+a:link, a:visited {
+	text-decoration: none;
+	color: #787878;
+}
+a:hover {
+	text-decoration: underline;
+	color: #000000;
+}
+
+a:active {
+	text-decoration: underline;
+	color: #787878;
+}
+.message{
+	border-bottom: 1px solid grey;
+}
+.warning{
+	color:orange;
+}
+.error{
+	color:red;
+}
+.success{
+	color:green;
+}
+.info{
+	color:blue;
+}
+/* General*/
+.small{
+	font-size: 0.7rem;
+}
+.mt-1{
+	margin-top: 1rem;
+}
+
+/* flex */
+.flex{
+	display:flex;
+}
+.flex-row{
+	flex-flow: row nowrap;
+}
+.flex-column{
+	flex-flow:column nowrap;
+}
+
+.flex-between{
+	justify-content: space-between;
+}
+.flex-around{
+	justify-content: space-around;
+}
+.flex-evenly{
+	justify-content: space-evenly;
+}
+.flex-1{
+	flex:1;
+}
+.flex-center{
+	justify-content: center;
+}
+.align-self-center{
+	align-self: center;
+}
+.align-items-center{
+	align-items: center;
 }

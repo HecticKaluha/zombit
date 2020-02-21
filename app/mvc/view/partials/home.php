@@ -11,9 +11,4 @@
     <a href="<?= URL ?>level/show/1">Nothing here yet</a>
     <a href="<?= URL ?>level/show/1">Nothing here yet</a>
     <a href="<?= URL ?>level/show/1">Nothing here yet</a>
-    <a href="<?= URL ?>level/show/1">Nothing here yet</a>
-    <a href="<?= URL ?>level/show/1">Nothing here yet</a>
-    <a href="<?= URL ?>level/show/1">Nothing here yet</a>
-    <a href="<?= URL ?>level/show/1">Nothing here yet</a>
-    <a href="<?= URL ?>level/show/1">Nothing here yet</a>
 </div>

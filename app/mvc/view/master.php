@@ -8,6 +8,7 @@
     <meta name="keywords" content="zombie">
     <title>Zombit</title>
     <link rel="stylesheet" type="text/css" href="<?= SOURCES ?>/style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="<?= SOURCES ?>/style/defaults.css"/>
 </head>
 <body>
 <p id="version">&copy;Zombit 2.0 Revamp</p>

@@ -96,8 +96,12 @@ body {
 	height:100%;
 }
 #options{
-	margin-bottom:1.3rem;
-
+	flex:1;
+}
+#description{
+	flex:4;
+	padding-bottom: 5px;
+	border-bottom: 1px solid grey;
 }
 #description p{
 	margin:0.3rem 0;
@@ -109,9 +113,6 @@ body {
 }
 .scrollable::-webkit-scrollbar{
 	display: none;
-}
-#description, #options{
-	flex-basis:auto;
 }
 #options > a {
 	margin:0.1rem 0;
@@ -133,6 +134,9 @@ body {
 .form-row > label, .form-row > input{
 	flex:1;
 }
+.form-row{
+	margin:5px 0;
+}
 .form{
 	height:100%;
 }
@@ -149,7 +153,6 @@ a:link, a:visited {
 	text-decoration: none;
 	color: #787878;
 }
-
 a:hover {
 	text-decoration: underline;
 	color: #000000;

@@ -89,3 +89,7 @@ a:active {
 .align-items-center{
 	align-items: center;
 }
+
+.italic{
+	font-style: italic;
+}

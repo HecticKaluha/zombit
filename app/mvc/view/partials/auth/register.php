@@ -1,5 +1,6 @@
 <form class="flex flex-column flex-between form" action="<?= URL ?>register/store" method="post">
     <div class="flex flex-column">
+        <h3>Registreer</h3>
         <div class="flex flex-row form-row">
             <label for="email">Email: </label><input type="email" name="email" id="email" value="<?= $data['email'] ?>"><span class="error">*</span>
         </div>

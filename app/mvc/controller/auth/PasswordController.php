@@ -4,6 +4,8 @@ class PasswordController
 {
     static $methodAccess = [
         'index' => 'GET',
+        'sendResetMail' => 'POST',
+        'resetForm' => 'GET',
         'resetPassword' => 'POST',
         'logOut' => 'GET',
     ];
@@ -13,11 +15,18 @@ class PasswordController
         Core::render(PARTIALS . 'auth/forgotPassword.php');
     }
 
-    static function resetPassword()
+    static function sendResetMail()
     {
         $request = new ResetPasswordRequest($_POST);
         $data = $request->getData();
         if ($request->isValid()) {
+
+
+
+            //maak code voor password reset aan.
+
+
+
 
             $subject = 'Reset je wachtwoord voor ' . env('APP_NAME');
             $body = '
@@ -36,7 +45,7 @@ class PasswordController
             $mail = Core::mail($data['email'], $subject, $body);
 
             if ($mail->send()) {
-                Core::render(PARTIALS . '/auth/passwordReset.php', array('data' => $data));
+                Core::render(PARTIALS . '/auth/passwordResetMailSent.php', array('data' => $data));
             } else {
                 ErrorController::error_cannot_send_mail($mail->ErrorInfo);
             }
@@ -45,11 +54,16 @@ class PasswordController
             Core::render(PARTIALS . '/auth/forgotPassword.php', array('data' => $data, 'errors' => $errors));
         }
     }
-//    else
-//{
-//Core::render(PARTIALS . 'auth/forgotPassword.php', array('data' => $data, 'errors' => $request->getErrors()));
-//}
-//}
+
+    static function resetForm(){
+        var_dump('aangekomen');
+        die();
+//        Core::render(PARTIALS . '/auth/resetPassword.php', array('data' => $data, 'errors' => $errors));
+    }
+
+    static function resetPassword(){
+        //code to reset the password
+    }
 
     static function logOut()
     {

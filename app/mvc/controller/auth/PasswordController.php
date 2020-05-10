@@ -1,9 +1,5 @@
 <?php
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-
 class PasswordController
 {
     static $methodAccess = [
@@ -23,22 +19,8 @@ class PasswordController
         $data = $request->getData();
         if ($request->isValid()) {
 
-            $mail = new PHPMailer;
-
-            $mail->isSMTP();                                    // Set mailer to use SMTP
-            $mail->Host = env('MAIL_HOST');                     // Specify main and backup SMTP servers
-            $mail->SMTPAuth = env('MAIL_SMTP_AUTH');            // Enable SMTP authentication
-            $mail->Username = env('MAIL_USERNAME');             // SMTP username
-            $mail->Password = env('MAIL_GOOGLE_APP_PASSWORD');  // SMTP password
-            $mail->SMTPSecure = env('MAIL_SMTP_SECURE');        // Enable TLS encryption, `ssl` also accepted
-            $mail->Port = 587;                                  // TCP port to connect to
-
-            $mail->setFrom('noreply@zombit.nl', env('APP_NAME'));
-            $mail->addAddress($data['email']);   // Add a recipient
-
-            $mail->isHTML(true);  // Set email format to HTML
-
-            $bodyContent = '
+            $subject = 'Reset je wachtwoord voor ' . env('APP_NAME');
+            $body = '
                         <html>
                             <head>
                                 <title>Reset uw wachtwooord voor zombit</title>
@@ -51,8 +33,7 @@ class PasswordController
                         </html>
                        ';
 
-            $mail->Subject = 'Reset je wachtwoord voor Zombit';
-            $mail->Body = $bodyContent;
+            $mail = Core::mail($data['email'], $subject, $body);
 
             if ($mail->send()) {
                 Core::render(PARTIALS . '/auth/passwordReset.php', array('data' => $data));

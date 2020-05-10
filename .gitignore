@@ -94,3 +94,5 @@ fabric.properties
 
 # Own stuff
 env.php
+/vendor/*
+/zombit_old/*

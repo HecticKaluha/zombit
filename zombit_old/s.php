@@ -1,1 +1,0 @@
-Het spel stopt hier. Wordt vervolgd!

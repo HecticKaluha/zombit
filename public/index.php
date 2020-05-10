@@ -11,7 +11,7 @@ require_once(ROOT . 'vendor/autoload.php');
 //not autoloadable... so require instead
 require(ROOT . '/packages/RedBeanPHP5_4_2/rb.php');
 
-R::setup('mysql:host=localhost;dbname='. DB_NAME, DB_USER, DB_PASS);
+R::setup('mysql:host=localhost;dbname='. env("DB_NAME"), env("DB_USERNAME"), env("DB_PASSWORD"));
 R::useFeatureSet( 'novice/latest' );
 $router = new Router();
 $router->route();

@@ -31,4 +31,9 @@ class ErrorController{
         $message = "ERROR - De functie $action() die u probeerde aan te roepen in $controller accepteerd geen request van het type $type ";
         Core::render('app/mvc/view/partials/errors/error.php', ["error" => true, "message" => $message]);
     }
+
+    static function error_cannot_send_mail($errorInfo){
+        $message = "ERROR - De functie $action() die u probeerde aan te roepen in $controller accepteerd geen request van het type $type ";
+        Core::render('app/mvc/view/partials/errors/error.php', ["error" => true, "message" => $message]);
+    }
 }

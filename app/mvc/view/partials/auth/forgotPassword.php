@@ -1,4 +1,4 @@
-<form class="flex flex-column flex-between form" action="<?= URL ?>password/resetpassword" method="post">
+<form class="flex flex-column flex-between form" action="<?= URL ?>password/resetPassword" method="POST">
     <div class="flex flex-column flex-1 flex-center">
         <div class="flex flex-column">
             <h3>Wachtwoordreset</h3>
@@ -12,5 +12,5 @@
             <?php endif;?>
         </div>
     </div>
-    <input type="submit" value="Inloggen"/>
+    <input type="submit" value="Verzend"/>
 </form>

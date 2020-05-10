@@ -3,6 +3,10 @@
 
 class HomeController{
 
+    static $methodAccess = [
+        'index' => 'GET',
+    ];
+
     static function index()
     {
         Core::render(PARTIALS .'/home.php');

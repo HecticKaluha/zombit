@@ -13,7 +13,7 @@ class ErrorController{
     }
 
     static function error_incorrect_parameter_count($controller, $action){
-        $message = "ERROR - De functie $action() die u probeerde aan te roepen in $controller, verwacht ten minste 1 parameter, deze is echter niet meegegeven in de url.";
+        $message = "ERROR - De functie $action() die u probeerde aan te roepen in $controller verwacht ten minste 1 parameter, deze is echter niet meegegeven in de url.";
         Core::render('app/mvc/view/partials/errors/error.php', ["error" => true, "message" => $message]);
     }
 
@@ -24,6 +24,11 @@ class ErrorController{
 
     static function error_incomplete_validation_ruleset($notFound, $type){
         $message = "Key(s) ".implode(", ", $notFound) ." niet gevonden in de ruleset van Model_".ucfirst($type);
+        Core::render('app/mvc/view/partials/errors/error.php', ["error" => true, "message" => $message]);
+    }
+
+    static function error_wrong_route_access_type($controller, $action, $type){
+        $message = "ERROR - De functie $action() die u probeerde aan te roepen in $controller accepteerd geen request van het type $type ";
         Core::render('app/mvc/view/partials/errors/error.php', ["error" => true, "message" => $message]);
     }
 }

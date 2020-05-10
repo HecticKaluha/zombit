@@ -3,7 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="2b740cd1-ff4d-461e-b869-94c6ecb43b50" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/controller/ErrorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/ErrorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/controller/LevelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/LevelController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/controller/auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mvc/controller/auth/PasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/auth/PasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/controller/auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/auth/RegisterController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +89,10 @@
       <workItem from="1581419689456" duration="8232000" />
       <workItem from="1581685454093" duration="16801000" />
       <workItem from="1582101040745" duration="1454000" />
-      <workItem from="1582287847371" duration="6400000" />
+      <workItem from="1582287847371" duration="6485000" />
+      <workItem from="1583324893143" duration="549000" />
+      <workItem from="1583355313002" duration="1412000" />
+      <workItem from="1589115680468" duration="5188000" />
     </task>
     <servers />
   </component>

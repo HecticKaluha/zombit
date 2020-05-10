@@ -1,5 +1,11 @@
 <?php
 class LoginController{
+
+    static $methodAccess = [
+        'index' => 'GET',
+        'login' => 'POST'
+    ];
+
     static function index(){
         Core::render(PARTIALS . 'auth/login.php');
     }
@@ -26,7 +32,5 @@ class LoginController{
     static function logOut(){
 
     }
-
-
 }
 

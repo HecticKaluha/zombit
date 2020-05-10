@@ -2,6 +2,12 @@
 
 class RegisterController
 {
+    static $methodAccess = [
+        'create' => 'GET',
+        'store' => 'POST',
+        'register' => 'GET',
+        'forgotPassword' => 'GET',
+    ];
 
 //    static function index(){
 //        Core::render(PARTIALS . 'auth/register.php');

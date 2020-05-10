@@ -1,4 +1,5 @@
 <?php
+
 class Router
 {
     // Met de route functie wordt bepaald welke controller en welke action er moet worden ingeladen
@@ -11,8 +12,7 @@ class Router
         // Hierna roept hij standaard de index functie aan.
         if (!$url['controller']) {
             call_user_func(array(__NAMESPACE__ . '\\' . DEFAULT_CONTROLLER, 'index'));
-        }
-        //wanneer we de controller moeten zoeken
+        } //wanneer we de controller moeten zoeken
         else {
             //check if file exist somewhere (nested) in controller folder
             $it = new RecursiveDirectoryIterator(ABSOLUTE_CONTROLLER_URL);
@@ -36,18 +36,24 @@ class Router
                 // De 1 wordt als eerste 'params' geplaatst
                 // In de controller Students wordt gekeken of de function Edit bestaat.
                 if (method_exists($url['controller'], $url['action'])) {
-                    // Wanneer die bestaat wordt er gekeken of je parameters hebt meegegeven bestaan. Als die bestaan worden die aan de functie meegegeven
-                    if ($url['params']) {
-                        call_user_func_array(array(__NAMESPACE__ . '\\' . $url['controller'], $url['action']), array($url['params']));
-                    } else {
-                        // Als ze niet bestaan, wordt alleen de functie uitgevoerd
-                        try {
-                            call_user_func([__NAMESPACE__ . '\\' . $url['controller'], $url['action']]);
-                            //wanneer de functie wel parameters accepteerd, maar deze niet zijn meegegeven, dan wordt er een error weergegeven
-                        } catch (ArgumentCountError $e) {
-                            ErrorController::error_incorrect_parameter_count($url['controller'], $url['action']);
+                    //Controleer of de action die je opvraagt, wel opgevraagd mag worden met de requesttype (Get/Post)
+                    $methodAccess = $url['controller']::$methodAccess;
+                    if ($_SERVER['REQUEST_METHOD'] == (array_key_exists($url['action'], $methodAccess) ? strtoupper($methodAccess[$url['action']]) : Null)) {
+                        // Wanneer die bestaat wordt er gekeken of je parameters hebt meegegeven bestaan. Als die bestaan worden die aan de functie meegegeven
+                        if ($url['params']) {
+                            call_user_func_array(array(__NAMESPACE__ . '\\' . $url['controller'], $url['action']), array($url['params']));
+                        } else {
+                            // Als ze niet bestaan, wordt alleen de functie uitgevoerd
+                            try {
+                                call_user_func([__NAMESPACE__ . '\\' . $url['controller'], $url['action']]);
+                                //wanneer de functie wel parameters accepteerd, maar deze niet zijn meegegeven, dan wordt er een error weergegeven
+                            } catch (ArgumentCountError $e) {
+                                ErrorController::error_incorrect_parameter_count($url['controller'], $url['action']);
 //                        call_user_func_array(array(__NAMESPACE__ . '\ErrorController', 'error_incorrect_parameter_count'), array(["controller" => $url['controller'], "action" => $url['action']]));
+                            }
                         }
+                    } else {
+                        ErrorController::error_wrong_route_access_type($url['controller'], $url['action'], $_SERVER['REQUEST_METHOD']);
                     }
                 } else {
                     // Wanneer de action niet bestaat, wordt de errorpagina getoond

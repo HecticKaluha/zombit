@@ -2,6 +2,12 @@
 
 class PasswordController
 {
+    static $methodAccess = [
+        'index' => 'GET',
+        'resetPassword' => 'POST',
+        'logOut' => 'GET',
+    ];
+
     static function index()
     {
         Core::render(PARTIALS . 'auth/forgotPassword.php');
@@ -35,15 +41,13 @@ class PasswordController
                         ';
 
             // To send HTML mail, the Content-type header must be set
-            $headers[] = 'MIME-Version: 1.0';
-            $headers[] = 'Content-type: text/html; charset=iso-8859-1';
+            $headers['MIME-Version'] = '1.0';
+            $headers['Content-type'] = 'text/html; charset=iso-8859-1';
 
-            // Additional headers
-            $headers[] = 'To: ' . $data['email'];
-            $headers[] = 'From: support@zombit.noreply.com';
+            $headers['From'] = 'support@zombit.noreply.com';
 
             // Mail it
-            if(mail($to, $subject, $message, implode("\r\n", $headers))){
+            if(mail($to, $subject, $message, $headers)){
                 Core::render(PARTIALS . '/auth/passwordReset.php', array('data' => $data));
             }
             else{

@@ -1,5 +1,17 @@
 <?php
 class UserController{
+
+    static $methodAccess = [
+        'index' => 'GET',
+        'show' => 'GET',
+        'create' => 'GET',
+        'store' => 'POST',
+        'edit' => 'GET',
+        'update' => 'POST',
+        'delete' => 'GET',
+        'destroy' => 'POST',
+    ];
+
     static function index()
     {
         $users = [];

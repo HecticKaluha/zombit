@@ -1,5 +1,17 @@
 <?php
 class LevelController{
+
+    static $methodAccess = [
+        'index' => 'GET',
+        'show' => 'GET',
+        'create' => 'GET',
+        'store' => 'POST',
+        'edit' => 'GET',
+        'update' => 'POST',
+        'delete' => 'GET',
+        'destroy' => 'POST',
+    ];
+
     static function index()
     {
         //1. Haal alle medewerkers op uit de database (via de model) en sla deze op in een variable

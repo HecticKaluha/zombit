@@ -9,6 +9,9 @@
         "app/core/",
         "packages/RedBeanPHP5_4_2"
       ]
-    }
+    },
+    "files": [
+      "env.php"
+    ]
   }
 }

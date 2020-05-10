@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b740cd1-ff4d-461e-b869-94c6ecb43b50" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/env.example.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_files.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/controller/ErrorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/ErrorController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/controller/LevelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/LevelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/controller/auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/auth/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/controller/auth/PasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/auth/PasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/controller/auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,19 +44,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/mvc/view/partials/level" />
-      <recent name="$PROJECT_DIR$/app/mvc/view/partials/user" />
-      <recent name="$PROJECT_DIR$/packages/RedBeanPHP5_4_2" />
-      <recent name="$PROJECT_DIR$/packages" />
-      <recent name="$PROJECT_DIR$/app" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/mvc/view/partials/auth" />
       <recent name="$PROJECT_DIR$/app/mvc/request" />
       <recent name="$PROJECT_DIR$/app/mvc/view/partials/user" />
       <recent name="$PROJECT_DIR$/sources/img" />
       <recent name="$PROJECT_DIR$/zombit_old/img" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/mvc/model" />
+      <recent name="$PROJECT_DIR$/app/mvc/view/partials/level" />
+      <recent name="$PROJECT_DIR$/app/mvc/view/partials/user" />
+      <recent name="$PROJECT_DIR$/packages/RedBeanPHP5_4_2" />
+      <recent name="$PROJECT_DIR$/packages" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -92,7 +91,7 @@
       <workItem from="1582287847371" duration="6485000" />
       <workItem from="1583324893143" duration="549000" />
       <workItem from="1583355313002" duration="1412000" />
-      <workItem from="1589115680468" duration="5188000" />
+      <workItem from="1589115680468" duration="7493000" />
     </task>
     <servers />
   </component>

@@ -6,6 +6,10 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit7c3fd93e939ffc4c0b8227f932c93151
 {
+    public static $files = array (
+        'e3d29885526bf36254b275f1e8720d97' => __DIR__ . '/../..' . '/env.php',
+    );
+
     public static $fallbackDirsPsr4 = array (
         0 => __DIR__ . '/../..' . '/app/mvc/controller',
         1 => __DIR__ . '/../..' . '/app/mvc/controller/auth',

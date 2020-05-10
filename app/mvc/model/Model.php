@@ -1,6 +1,6 @@
 <?php
 
-class Model extends RedBean_SimpleModel
+class Model extends \RedBeanPHP\SimpleModel
 {
 
 }

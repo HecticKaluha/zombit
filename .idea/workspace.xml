@@ -2,211 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b740cd1-ff4d-461e-b869-94c6ecb43b50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Zombit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Zombit.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/model/Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/model/Model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/autoload.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_files.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/auth/accountmaken.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/auth/fouteinlog.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/auth/inloggen.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/auth/logout.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/battleengine.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/begin.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/casino.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/db/db.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/gameover.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/healthbar.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/home.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/19.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/20.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/22.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/23.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/24.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/25.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/27.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/28.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/31.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/33.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/34.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/35.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/36.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/37.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/38.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/39.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/40.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/douche.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/henk.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/jij.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/start.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/img/winkeleigenaar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/koopshop.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/muziek.mp3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/11.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/111.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/11111.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/111111.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/1112.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/112.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/1121.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/11211.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/11212.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/112121.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/1122.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/11221.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/112211.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/112212.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/1122121.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/11221211.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/11222.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/12.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/121.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/1211.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/12111.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/121111.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/12112.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/1212.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/12121.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/121211.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/121212.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/1212121.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/12122.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/121221.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/1212211.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/12122111.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/12122112.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/122.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/1221.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/12211.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/122111.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/1221111.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/1221112.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/122112.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/12212.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/1222(1).php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/1222.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/12221.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/122211.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/122212.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/1222121.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/12222.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/122221.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/1222211.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/12222111.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/12222112.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/122221121.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/1222211211.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/1222212.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/12222121.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/122221211.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/122222.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/21.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/211.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/2111.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/21111.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/21112.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/2112.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/212.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/22.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/221.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/2212.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/22121.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/222.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/2221.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/22211.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/222111.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/222112.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/2221121.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/22212.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/222121.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/2221211.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/2222.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel11.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel111.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel21.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel211.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel212.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel22.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel221.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel23.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel231.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel2311.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel23111.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel232.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel2321.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel3.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel31.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel4.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel5.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel51.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel511.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel5111.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel5112.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel512.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/hotel52.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/winkel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/winkel1.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/winkel11.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/winkel111.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/winkel1111.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/winkel112.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/winkel1121(1).php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/winkel1121.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/winkel12.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/winkel121.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/winkel1211.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/partials/winkel2.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/s.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/shop.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/stad.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/startgame.htm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/verkoopshop.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/zombit_old/wachtwoordvergeten.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -227,6 +29,7 @@
     <include_path>
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/phpmailer/phpmailer" />
+      <path value="$PROJECT_DIR$/vendor/gabordemooij/redbean" />
     </include_path>
   </component>
   <component name="ProjectId" id="1X0xD2aPyCMW56MKoOTaTJzWBo0" />
@@ -289,7 +92,7 @@
       <workItem from="1582287847371" duration="6485000" />
       <workItem from="1583324893143" duration="549000" />
       <workItem from="1583355313002" duration="1412000" />
-      <workItem from="1589115680468" duration="8638000" />
+      <workItem from="1589115680468" duration="10334000" />
     </task>
     <servers />
   </component>

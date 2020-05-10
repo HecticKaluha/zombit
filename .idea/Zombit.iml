@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/app/mvc/controller/auth" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/app/mvc/model" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/gabordemooij/redbean" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpmailer/phpmailer" />
     </content>
     <orderEntry type="inheritedJdk" />

@@ -8,8 +8,7 @@ define("ROOT", dirname(__DIR__) . DIRECTORY_SEPARATOR);
 require(ROOT . "/app/core/config.php");
 require_once(ROOT . 'vendor/autoload.php');
 
-//not autoloadable... so require instead
-require(ROOT . '/packages/RedBeanPHP5_4_2/rb.php');
+class_alias('\RedBeanPHP\R','\R');
 
 R::setup('mysql:host=localhost;dbname='. env("DB_NAME"), env("DB_USERNAME"), env("DB_PASSWORD"));
 R::useFeatureSet( 'novice/latest' );

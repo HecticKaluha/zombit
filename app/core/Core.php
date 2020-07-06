@@ -20,7 +20,7 @@ class Core
         require(ROOT . 'app/mvc/view/master.php');
     }
 
-    static function mail($email, $subject, $body)
+    static function mail($email, $subject, $template, $params)
     {
         $mail = new PHPMailer;
 
@@ -38,8 +38,14 @@ class Core
         $mail->isHTML(true);  // Set email format to HTML
 
         $mail->Subject = $subject;
-        $mail->Body = $body;
 
-        return $mail;
+        $body = file_get_contents(ROOT .'app/mvc/view/mails/' . $template);
+        foreach($params as $key => $value)
+        {
+            $body = str_replace('{{'.$key.'}}', $value, $body);
+        }
+
+        $mail->Body = $body;
+        return $mail->send();
     }
 }

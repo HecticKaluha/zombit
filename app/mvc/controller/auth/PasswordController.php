@@ -20,24 +20,13 @@ class PasswordController
         $request = new ResetPasswordRequest($_POST);
         $data = $request->getData();
         if ($request->isValid()) {
-
-
-
             //maak code voor password reset aan.
 
             $subject = 'Reset je wachtwoord voor ' . env('APP_NAME');
-            $body = file_get_contents(ROOT .'app/mvc/view/mails/passwordResetMail.php');
+            $template = 'passwordResetMail.php';
+            $params = ['url' => env('SITE_DOMAIN').'password/resetForm'];
 
-            //https://stackoverflow.com/questions/3706855/send-email-with-a-template-using-php
-            $variables = ['url' => env('SITE_DOMAIN').'password/resetForm'];
-            foreach($variables as $key => $value)
-            {
-                $body = str_replace('{{'.$key.'}}', $value, $body);
-            }
-
-            $mail = Core::mail($data['email'], $subject, $body);
-
-            if ($mail->send()) {
+            if (Core::mail($data['email'], $subject, $template, $params)) {
                 Core::render(PARTIALS . '/auth/passwordResetMailSent.php', array('data' => $data));
             } else {
                 ErrorController::error_cannot_send_mail($mail->ErrorInfo);

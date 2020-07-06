@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2b740cd1-ff4d-461e-b869-94c6ecb43b50" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Core.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Core.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mvc/controller/auth/PasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/auth/PasswordController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mvc/view/mails/passwordResetMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/view/mails/passwordResetMail.php" afterDir="false" />
     </list>
@@ -93,7 +93,7 @@
       <workItem from="1589875413583" duration="218000" />
       <workItem from="1593972357877" duration="5630000" />
       <workItem from="1594028712443" duration="3000" />
-      <workItem from="1594042579845" duration="4061000" />
+      <workItem from="1594042579845" duration="5094000" />
     </task>
     <servers />
   </component>

@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b740cd1-ff4d-461e-b869-94c6ecb43b50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/mvc/view/mails/passwordResetMail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mvc/controller/auth/PasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/auth/PasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/view/mails/passwordResetMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/view/mails/passwordResetMail.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +91,9 @@
       <workItem from="1583355313002" duration="1412000" />
       <workItem from="1589115680468" duration="18141000" />
       <workItem from="1589875413583" duration="218000" />
-      <workItem from="1593972357877" duration="5437000" />
+      <workItem from="1593972357877" duration="5630000" />
+      <workItem from="1594028712443" duration="3000" />
+      <workItem from="1594042579845" duration="4061000" />
     </task>
     <servers />
   </component>

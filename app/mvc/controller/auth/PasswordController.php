@@ -26,24 +26,14 @@ class PasswordController
             //maak code voor password reset aan.
 
             $subject = 'Reset je wachtwoord voor ' . env('APP_NAME');
-            //https://stackoverflow.com/questions/3706855/send-email-with-a-template-using-php
-            $body = '<html>
-                        <head>
-                            <title>Reset uw wachtwooord voor zombit</title>
-                        </head>
-                        <body>
-                            <h1>Reset je wachtoord voor Zombit.</h1>
-                            <p>Klik op de onderstaande link om uw wachtwoord te resetten.</p>
-                            <a href="' . SITE_DOMAIN . 'password/resetForm">wachtwoord resetten</a>
-                            <br>
-                            <br>
-                            <p>Met vriendelijke groet,</p>
-                            <p>Het zombit Team</p>
-                        </body>
-                    </html>';
+            $body = file_get_contents(ROOT .'app/mvc/view/mails/passwordResetMail.php');
 
-            $vars = ['{name}' => 'Piet'];
-            { }
+            //https://stackoverflow.com/questions/3706855/send-email-with-a-template-using-php
+            $variables = ['url' => env('SITE_DOMAIN').'password/resetForm'];
+            foreach($variables as $key => $value)
+            {
+                $body = str_replace('{{'.$key.'}}', $value, $body);
+            }
 
             $mail = Core::mail($data['email'], $subject, $body);
 

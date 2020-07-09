@@ -3,12 +3,37 @@
 
 class HomeController{
 
-    static $methodAccess = [
+    private $methodAccess = [
         'index' => 'GET',
     ];
+    private $name;
 
-    static function index()
+    /**
+     * @return array
+     */
+    public function getMethodAccess(): array
+    {
+        return $this->methodAccess;
+    }
+
+    function index()
     {
         Core::render(PARTIALS .'/home.php');
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
     }
 }

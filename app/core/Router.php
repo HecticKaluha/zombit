@@ -11,7 +11,8 @@ class Router
         // Als die niet bestaat, gaat hij de standaard controller inladen, welke in Core.php is aangemaakt.
         // Hierna roept hij standaard de index functie aan.
         if (!$url['controller']) {
-            call_user_func(array(__NAMESPACE__ . '\\' . DEFAULT_CONTROLLER, 'index'));
+            $controller = new HomeController();
+            $controller->index();
         } //wanneer we de controller moeten zoeken
         else {
             //check if file exist somewhere (nested) in controller folder
@@ -31,33 +32,35 @@ class Router
             }
             //if file is found in controller folder (recursively), call the functions on it
             if ($found_file) {
+                $controller = new $url['controller']();
+                $controller->setName($url['controller']);
+                $action = $url['action'];
                 // Vervolgens wordt er gekeken of er een functie met de naam bestaat die in de key action zit.
                 // Bijvoorbeeld: http://localhost/Students/Edit/1, dan is de action Edit.
                 // De 1 wordt als eerste 'params' geplaatst
                 // In de controller Students wordt gekeken of de function Edit bestaat.
-                if (method_exists($url['controller'], $url['action'])) {
+                if (method_exists($controller, $action)) {
                     //Controleer of de action die je opvraagt, wel opgevraagd mag worden met de requesttype (Get/Post)
-                    $methodAccess = $url['controller']::$methodAccess;
-                    if ($_SERVER['REQUEST_METHOD'] == (array_key_exists($url['action'], $methodAccess) ? strtoupper($methodAccess[$url['action']]) : Null)) {
+                    $methodAccess = $controller->getMethodAccess();
+                    if ($_SERVER['REQUEST_METHOD'] == (array_key_exists($action, $methodAccess) ? strtoupper($methodAccess[$action]) : Null)) {
                         // Wanneer die bestaat wordt er gekeken of je parameters hebt meegegeven bestaan. Als die bestaan worden die aan de functie meegegeven
                         if ($url['params']) {
-                            call_user_func_array(array(__NAMESPACE__ . '\\' . $url['controller'], $url['action']), array($url['params']));
+                            $controller->$action($url['params']);
                         } else {
                             // Als ze niet bestaan, wordt alleen de functie uitgevoerd
                             try {
-                                call_user_func([__NAMESPACE__ . '\\' . $url['controller'], $url['action']]);
+                                $controller->$action();
                                 //wanneer de functie wel parameters accepteerd, maar deze niet zijn meegegeven, dan wordt er een error weergegeven
                             } catch (ArgumentCountError $e) {
-                                ErrorController::error_incorrect_parameter_count($url['controller'], $url['action']);
-//                        call_user_func_array(array(__NAMESPACE__ . '\ErrorController', 'error_incorrect_parameter_count'), array(["controller" => $url['controller'], "action" => $url['action']]));
+                                ErrorController::error_incorrect_parameter_count($controller->getName(), $action);
                             }
                         }
                     } else {
-                        ErrorController::error_wrong_route_access_type($url['controller'], $url['action'], $_SERVER['REQUEST_METHOD']);
+                        ErrorController::error_wrong_route_access_type($controller->getName(), $action, $_SERVER['REQUEST_METHOD']);
                     }
                 } else {
                     // Wanneer de action niet bestaat, wordt de errorpagina getoond
-                    ErrorController::error_404_action($url['controller'], $url['action']);
+                    ErrorController::error_404_action($controller->getName(), $action);
                 }
             } else {
                 // Wanneer de controller niet bestaat, wordt de errorpagina getoond

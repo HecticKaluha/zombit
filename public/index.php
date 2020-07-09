@@ -13,6 +13,7 @@ class_alias('\RedBeanPHP\R','\R');
 
 R::setup('mysql:host=localhost;dbname='. env("DB_NAME"), env("DB_USERNAME"), env("DB_PASSWORD"));
 R::useFeatureSet( 'novice/latest' );
+
 $router = new Router();
 $router->route();
 //Router::route();

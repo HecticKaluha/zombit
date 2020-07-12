@@ -7,6 +7,7 @@
         "app/mvc/request/",
         "app/mvc/model",
         "app/core/",
+        "app/core/classes",
         "packages/RedBeanPHP5_4_2"
       ]
     },

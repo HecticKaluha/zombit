@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b740cd1-ff4d-461e-b869-94c6ecb43b50" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/core/classes/Url.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Zombit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Zombit.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/Router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Core.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/classes/Core.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/classes/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/controller/ErrorController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/ErrorController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,19 +45,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/core/classes" />
+      <recent name="$PROJECT_DIR$/app/mvc/model" />
+      <recent name="$PROJECT_DIR$/app/mvc/view/partials/level" />
+      <recent name="$PROJECT_DIR$/app/mvc/view/partials/user" />
+      <recent name="$PROJECT_DIR$/packages/RedBeanPHP5_4_2" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/mvc/view/partials/auth" />
       <recent name="$PROJECT_DIR$/app/mvc/request" />
       <recent name="$PROJECT_DIR$/app/mvc/view/partials/user" />
       <recent name="$PROJECT_DIR$/sources/img" />
       <recent name="$PROJECT_DIR$/zombit_old/img" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/mvc/model" />
-      <recent name="$PROJECT_DIR$/app/mvc/view/partials/level" />
-      <recent name="$PROJECT_DIR$/app/mvc/view/partials/user" />
-      <recent name="$PROJECT_DIR$/packages/RedBeanPHP5_4_2" />
-      <recent name="$PROJECT_DIR$/packages" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -92,7 +96,7 @@
       <workItem from="1589875413583" duration="218000" />
       <workItem from="1593972357877" duration="5630000" />
       <workItem from="1594028712443" duration="3000" />
-      <workItem from="1594042579845" duration="15853000" />
+      <workItem from="1594042579845" duration="21211000" />
     </task>
     <servers />
   </component>

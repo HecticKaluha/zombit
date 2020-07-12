@@ -2,11 +2,12 @@
 <module type="WEB_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/app/core" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/app/mvc/controller/auth" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/app/core/classes" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/app/mvc/controller" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/app/core" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/packages/RedBeanPHP5_4_2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/app/mvc/request" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/app/mvc/controller/auth" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/app/mvc/model" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/gabordemooij/redbean" />

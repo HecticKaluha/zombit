@@ -34,5 +34,13 @@ class UserService implements ServiceInterface
     {
         $this->userDao->destroy($id);
     }
+
+    function generatePasswordResetCode($email){
+        return $this->userDao->generatePasswordResetCode($email);
+    }
+
+    function updatePassword(){
+        $this->userDao->updatePassword();
+    }
 }
 

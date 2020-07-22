@@ -7,8 +7,10 @@
       <sourceFolder url="file://$MODULE_DIR$/app/mvc/controller" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/app/core" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/packages/RedBeanPHP5_4_2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/app/mvc/dao" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/app/mvc/request" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/app/mvc/model" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/app/mvc/service" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/gabordemooij/redbean" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpmailer/phpmailer" />

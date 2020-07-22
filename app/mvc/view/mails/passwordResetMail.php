@@ -4,8 +4,9 @@
     </head>
     <body>
         <h1>Reset je wachtoord voor Zombit.</h1>
-        <p>Klik op de onderstaande link om uw wachtwoord te resetten.</p>
-        <h2><a href="{{url}}">wachtwoord resetten</a></h2>
+        <p>Gebruik de onderstaande code in de browser om uw wachtwoord te resetten.</p>
+        <br>
+        <h2>{{code}}</h2>
         <br>
         <p>Met vriendelijke groet,</p>
         <p>Het zombit Team</p>

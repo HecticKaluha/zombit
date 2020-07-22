@@ -5,6 +5,8 @@
         "app/mvc/controller",
         "app/mvc/controller/auth",
         "app/mvc/request/",
+        "app/mvc/service/",
+        "app/mvc/dao/",
         "app/mvc/model",
         "app/core/",
         "app/core/classes",

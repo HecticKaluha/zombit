@@ -40,4 +40,25 @@ class UserDao implements DaoInterface
         $user = $this->get($id);
         R::trash($user);
     }
+
+    function getByEmail($email){
+        $user = R::findOne($this->type, 'email = ?',array($email));
+        return $user;
+    }
+
+    function generatePasswordResetCode($email){
+        $user = $this->getByEmail($email);
+        $code = false;
+
+        if(!is_null($user)){
+            $code = substr(md5(rand()), 0, 7);
+            $user->code = $code;
+            R::store($user);
+        }
+        return $code;
+    }
+
+    function updatePassword(){
+
+    }
 }

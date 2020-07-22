@@ -5,11 +5,22 @@ class PasswordController
     private $methodAccess = [
         'index' => 'GET',
         'sendResetMail' => 'POST',
-        'resetForm' => 'GET',
+        'checkCode' => 'POST',
         'resetPassword' => 'POST',
         'logOut' => 'GET',
     ];
     private $name;
+    private $userService;
+
+    /**
+     * PasswordController constructor.
+     * @param $userService
+     */
+    public function __construct()
+    {
+        $this->userService = new UserService();
+    }
+
 
     public function getMethodAccess(): array
     {
@@ -43,13 +54,14 @@ class PasswordController
         $data = $request->getData();
         if ($request->isValid()) {
             //maak code voor password reset aan.
+            $code = $this->userService->generatePasswordResetCode($data['email']);
 
             $subject = 'Reset je wachtwoord voor ' . env('APP_NAME');
             $template = 'passwordResetMail.php';
-            $params = ['url' => env('SITE_DOMAIN').'password/resetForm'];
+            $params = ['url' => env('SITE_DOMAIN').'password/resetForm', 'code' => $code];
 
             if (Core::mail($data['email'], $subject, $template, $params)) {
-                Core::render(PARTIALS . '/auth/passwordResetMailSent.php', array('data' => $data));
+                Core::render(PARTIALS . '/auth/passwordResetCheckCode.php', array('data' => $data));
             } else {
                 ErrorController::error_cannot_send_mail($mail->ErrorInfo);
             }
@@ -59,10 +71,10 @@ class PasswordController
         }
     }
 
-    public function resetForm(){
+    public function checkCode(){
         var_dump('aangekomen');
         die();
-//        Core::render(PARTIALS . '/auth/resetPassword.php', array('data' => $data, 'errors' => $errors));
+        //make checkcode request and validate it.
     }
 
     public function resetPassword(){

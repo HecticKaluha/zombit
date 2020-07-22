@@ -2,20 +2,42 @@
 
 class PasswordController
 {
-    static $methodAccess = [
+    private $methodAccess = [
         'index' => 'GET',
         'sendResetMail' => 'POST',
         'resetForm' => 'GET',
         'resetPassword' => 'POST',
         'logOut' => 'GET',
     ];
+    private $name;
 
-    static function index()
+    public function getMethodAccess(): array
+    {
+        return $this->methodAccess;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    public function index()
     {
         Core::render(PARTIALS . 'auth/forgotPassword.php');
     }
 
-    static function sendResetMail()
+    public function sendResetMail()
     {
         $request = new ResetPasswordRequest($_POST);
         $data = $request->getData();
@@ -37,17 +59,17 @@ class PasswordController
         }
     }
 
-    static function resetForm(){
+    public function resetForm(){
         var_dump('aangekomen');
         die();
 //        Core::render(PARTIALS . '/auth/resetPassword.php', array('data' => $data, 'errors' => $errors));
     }
 
-    static function resetPassword(){
+    public function resetPassword(){
         //code to reset the password
     }
 
-    static function logOut()
+    public function logOut()
     {
 
     }

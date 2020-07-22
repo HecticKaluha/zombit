@@ -1,16 +1,38 @@
 <?php
 class LoginController{
 
-    static $methodAccess = [
+    private $methodAccess = [
         'index' => 'GET',
         'login' => 'POST'
     ];
+    private $name;
 
-    static function index(){
+    public function getMethodAccess(): array
+    {
+        return $this->methodAccess;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
+
+    public function index(){
         Core::render(PARTIALS . 'auth/login.php');
     }
 
-    static function login(){
+    public function login(){
         $request = new LoginUserRequest($_POST);
         $data = $request->getData();
         if($request->isValid()){
@@ -29,7 +51,7 @@ class LoginController{
         }
     }
 
-    static function logOut(){
+    public function logOut(){
 
     }
 }

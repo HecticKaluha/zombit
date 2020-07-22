@@ -2,23 +2,49 @@
 
 class RegisterController
 {
-    static $methodAccess = [
+    private $methodAccess = [
         'create' => 'GET',
         'store' => 'POST',
         'register' => 'GET',
         'forgotPassword' => 'GET',
     ];
+    private $name;
+
+    /**
+     * @return array
+     */
+    public function getMethodAccess(): array
+    {
+        return $this->methodAccess;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * @param mixed $name
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+    }
 
 //    static function index(){
 //        Core::render(PARTIALS . 'auth/register.php');
 //    }
 
-    static function create()
+
+    public function create()
     {
         Core::render(PARTIALS . 'auth/register.php');
     }
 
-    static function store()
+    public function store()
     {
         $request = new CreateUserRequest($_POST);
         $data = $request->getData();
@@ -32,12 +58,12 @@ class RegisterController
         }
     }
 
-    static function register()
+    public function register()
     {
 
     }
 
-    static function forgotPassword()
+    public function forgotPassword()
     {
 
     }

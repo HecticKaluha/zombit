@@ -16,7 +16,7 @@ class HomeController{
         return $this->methodAccess;
     }
 
-    function index()
+    public function index()
     {
         Core::render(PARTIALS .'/home.php');
     }

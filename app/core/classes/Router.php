@@ -3,7 +3,7 @@
 class Router
 {
     private $errorController;
-
+    private $url;
     public function __construct()
     {
         $this->errorController = new ErrorController();
@@ -15,39 +15,26 @@ class Router
         // Hier wordt de functie aangeroepen die de URL op splitst op het standaard seperatie teken (in PHP is dit een /)
 
         if(isset($_GET['url'])){
-            $url = new Url($_GET['url']);
+            $this->url = new Url($_GET['url']);
         }else{
-            $url = new Url();
+            $this->url = new Url();
         }
         // Er wordt een variable opgemaakt uit de URL, de eerste variabele wordt geplaatst in de key controller, de tweede wordt in de key action geplaatst. De overige worden in params geplaatst (als array)
         // Als die niet bestaat, gaat hij de standaard controller inladen, welke in Core.php is aangemaakt.
         // Hierna roept hij standaard de index functie aan.
-        if (null == $url->getController()) {
+        if (null == $this->url->getController()) {
             $controller = new HomeController();
             $controller->index();
         } //wanneer we de controller moeten zoeken
         else {
             //check if file exist somewhere (nested) in controller folder
-            $it = new RecursiveDirectoryIterator(ABSOLUTE_CONTROLLER_URL);
-            $display = Array('php');
-            $found_file = false;
-            foreach (new RecursiveIteratorIterator($it) as $fileToCheck) {
-                $exploded = explode('.', $fileToCheck);
-                $extension = array_pop($exploded);
-                if (in_array(strtolower($extension), $display)) {
-                    $sub_path = substr($fileToCheck, strpos($fileToCheck, CONTROLLER_PATH) + strlen(CONTROLLER_PATH));
-                    if (strpos($sub_path, $url->getController()) !== false) {
-                        $found_file = $sub_path;
-                        break;
-                    }
-                }
-            }
+            $found_file = $this->checkFileExist();
             //if file is found in controller folder (recursively), call the functions on it
             if ($found_file) {
-                $controller = $url->getController();
+                $controller = $this->url->getController();
                 $controller = new $controller;
-                $controller->setName($url->getController());
-                $action = $url->getAction();
+                $controller->setName($this->url->getController());
+                $action = $this->url->getAction();
                 // Vervolgens wordt er gekeken of er een functie met de naam bestaat die in de key action zit.
                 // Bijvoorbeeld: http://localhost/Students/Edit/1, dan is de action Edit.
                 // De 1 wordt als eerste 'params' geplaatst
@@ -57,8 +44,8 @@ class Router
                     $methodAccess = $controller->getMethodAccess();
                     if ($_SERVER['REQUEST_METHOD'] == (array_key_exists($action, $methodAccess) ? strtoupper($methodAccess[$action]) : Null)) {
                         // Wanneer die bestaat wordt er gekeken of je parameters hebt meegegeven bestaan. Als die bestaan worden die aan de functie meegegeven
-                        if ($url->getParams()) {
-                            $controller->$action($url->getParams());
+                        if ($this->url->getParams()) {
+                            $controller->$action($this->url->getParams());
                         } else {
                             // Als ze niet bestaan, wordt alleen de functie uitgevoerd
                             try {
@@ -77,8 +64,26 @@ class Router
                 }
             } else {
                 // Wanneer de controller niet bestaat, wordt de errorpagina getoond
-                $this->errorController->error_404_controller($url->getController());
+                $this->errorController->error_404_controller($this->url->getController());
             }
         }
+    }
+
+    function checkFileExist(){
+        $it = new RecursiveDirectoryIterator(ABSOLUTE_CONTROLLER_URL);
+        $display = Array('php');
+        $found_file = false;
+        foreach (new RecursiveIteratorIterator($it) as $fileToCheck) {
+            $exploded = explode('.', $fileToCheck);
+            $extension = array_pop($exploded);
+            if (in_array(strtolower($extension), $display)) {
+                $sub_path = substr($fileToCheck, strpos($fileToCheck, CONTROLLER_PATH) + strlen(CONTROLLER_PATH));
+                if (strpos($sub_path, $this->url->getController()) !== false) {
+                    $found_file = $sub_path;
+                    break;
+                }
+            }
+        }
+        return $found_file;
     }
 }

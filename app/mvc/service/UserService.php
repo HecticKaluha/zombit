@@ -20,14 +20,14 @@ class UserService implements ServiceInterface
         return $this->userDao->getAll();
     }
 
-    public function store($data)
+    public function store($user)
     {
-        return $this->userDao->store($data);
+        return $this->userDao->store($user);
     }
 
-    function update($id, $data)
+    function update($user)
     {
-        return $this->userDao->update($id, $data);
+        return $this->userDao->update($user);
     }
 
     function destroy($id)
@@ -39,8 +39,20 @@ class UserService implements ServiceInterface
         return $this->userDao->generatePasswordResetCode($email);
     }
 
+    function checkPasswordResetCode($data){
+        return $this->userDao->checkPasswordResetCode($data);
+    }
+
     function updatePassword(){
-        $this->userDao->updatePassword();
+        return $this->userDao->updatePassword();
+    }
+
+    function resetPassword($data){
+        return $this->userDao->resetPassword($data);
+    }
+
+    function login($data){
+        return $this->userDao->login($data);
     }
 }
 

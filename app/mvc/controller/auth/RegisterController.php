@@ -48,8 +48,16 @@ class RegisterController
     {
         $request = new CreateUserRequest($_POST);
         $data = $request->getData();
+
         if($request->isValid()){
-            $user = Model_User::store($data);
+            $user = R::dispense('user');
+            $user->setEmail($data['email']);
+            $user->setUsername($data['username']);
+            $user->setPassword($data['password']);
+
+            $userService = new UserService();
+            $userService->store($user);
+
             $_SESSION['message'] = array("type"=>"success", "message" => "Account $user->username succesvol aangemaakt.");
             Core::render(PARTIALS . 'auth/login.php', array('user' => $user));
         }

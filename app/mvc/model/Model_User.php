@@ -2,88 +2,40 @@
 
 class Model_User extends  Model
 {
-    protected static $type = 'user';
+    private $type = 'user';
 
-    static function getAllUsers()
-    {
-        $result = null;
-        try {
 
-        } catch (Exception $e) {
-
-        } finally {
-            $conn = null;
-        }
-        return $result;
+    public function getEmail(){
+        return $this->email;
     }
 
-    static function getUser($id)
-    {
-        return R::load('user', $id);
+    public function setEmail($email){
+        $this->email = $email;
     }
 
-    static function getUserByEmail($email){
-        return R::findOne('user', 'email = ?', array($email));
+    public function getUsername(){
+        return $this->username;
     }
 
-    static function store($data)
-    {
-        $user = R::dispense(self::$type);
-        $user->email = $data['email'];
-        $user->username = $data['username'];
-        $user->password = PASSWORD_HASH($data['password'], PASSWORD_BCRYPT);
-        $id = R::store($user);
-        return $user;
+    public function setUsername($username){
+        $this->username = $username;
     }
 
-    function patchUser($data)
-    {
-        // Maak hier de code om een user te bewerken
+    public function getPassword(){
+        return $this->password;
     }
 
-    function destroyUser($id)
-    {
-        // Maak hier de code om een user te verwijderen
+    public function setPassword($password){
+        $this->password = PASSWORD_HASH($password, PASSWORD_BCRYPT);
     }
 
-    /**
-     * @return string
-     */
-    public static function getType()
-    {
-        return self::$type;
+    public function getCode(){
+        return $this->code;
     }
 
-    static function login($data){
-        $bean = R::findOne(self::$type, "email = ?", array($data['email']));
-        if(!PASSWORD_VERIFY($data['password'], $bean->password)) {
-            return false;
-        }
-        else{
-            return $bean;
-        }
+    public function setCode($code){
+        $this->code = $code;
     }
-
-    static function checkPasswordResetCode($data){
-        $bean = R::findOne(self::$type, 'email = ?', array($data['email']));
-        if($bean->code == $data['code']){
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
-
-    static function resetPassword($data){
-        $user = self::getUserByEmail($data['email']);
-        $user->password = PASSWORD_HASH($data['password'], PASSWORD_BCRYPT);
-        $user->code = null;
-        $id = R::store($user);
-        return $user;
-    }
-
-
-
-
 }
+
 

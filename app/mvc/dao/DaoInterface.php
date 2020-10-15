@@ -8,9 +8,9 @@ interface DaoInterface
 
     function getAll();
 
-    function store($data);
+    function store($user);
 
-    function update($id, $data);
+    function update($user);
 
     function destroy($id);
 

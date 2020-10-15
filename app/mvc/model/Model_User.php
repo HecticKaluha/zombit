@@ -3,7 +3,6 @@
 class Model_User extends  Model
 {
     protected static $type = 'user';
-    private $email = "tets";
 
     static function getAllUsers()
     {
@@ -27,12 +26,12 @@ class Model_User extends  Model
         return R::findOne('user', 'email = ?', array($email));
     }
 
-    static function store($email, $username, $password)
+    static function store($data)
     {
         $user = R::dispense(self::$type);
-        $user->email = $email;
-        $user->username = $username;
-        $user->password = PASSWORD_HASH($password, PASSWORD_BCRYPT);
+        $user->email = $data['email'];
+        $user->username = $data['username'];
+        $user->password = PASSWORD_HASH($data['password'], PASSWORD_BCRYPT);
         $id = R::store($user);
         return $user;
     }
@@ -48,14 +47,6 @@ class Model_User extends  Model
     }
 
     /**
-     * @return array
-     */
-    public static function getCreateRules()
-    {
-        return self::$createRules;
-    }
-
-    /**
      * @return string
      */
     public static function getType()
@@ -63,9 +54,9 @@ class Model_User extends  Model
         return self::$type;
     }
 
-    static function login($email, $password){
-        $bean = R::findOne(self::$type, "email = ?", array($email));
-        if(!PASSWORD_VERIFY($password, $bean->password)) {
+    static function login($data){
+        $bean = R::findOne(self::$type, "email = ?", array($data['email']));
+        if(!PASSWORD_VERIFY($data['password'], $bean->password)) {
             return false;
         }
         else{
@@ -73,9 +64,9 @@ class Model_User extends  Model
         }
     }
 
-    static function checkPasswordResetCode($email, $code){
-        $bean = R::findOne(self::$type, 'email = ?', array($email));
-        if($bean->code == $code){
+    static function checkPasswordResetCode($data){
+        $bean = R::findOne(self::$type, 'email = ?', array($data['email']));
+        if($bean->code == $data['code']){
             return true;
         }
         else{
@@ -83,9 +74,9 @@ class Model_User extends  Model
         }
     }
 
-    static function resetPassword($email, $password){
-        $user = self::getUserByEmail($email);
-        $user->password = PASSWORD_HASH($password, PASSWORD_BCRYPT);
+    static function resetPassword($data){
+        $user = self::getUserByEmail($data['email']);
+        $user->password = PASSWORD_HASH($data['password'], PASSWORD_BCRYPT);
         $user->code = null;
         $id = R::store($user);
         return $user;

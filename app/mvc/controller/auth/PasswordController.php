@@ -75,7 +75,7 @@ class PasswordController
         $request = new CheckPasswordResetCodeRequest($_POST);
         $data = $request->getData();
         if($request->isValid()){
-            if(Model_User::checkPasswordResetCode($data['email'], $data['code'])){
+            if(Model_User::checkPasswordResetCode($data)){
                 Core::render(PARTIALS . '/auth/resetPassword.php', array('data' => $data));
             }
             else{
@@ -92,7 +92,7 @@ class PasswordController
         $request = new resetpasswordRequest($_POST);
         $data = $request->getData();
         if($request->isValid()){
-            Model_User::resetPassword($data['email'], $data['password']);
+            Model_User::resetPassword($data);
             Core::render(PARTIALS . '/auth/login.php', array('data' => $data));
         }
         else{

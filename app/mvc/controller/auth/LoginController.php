@@ -36,7 +36,7 @@ class LoginController{
         $request = new LoginUserRequest($_POST);
         $data = $request->getData();
         if($request->isValid()){
-            if($user = Model_User::login($data['email'], $data['password'])){
+            if($user = Model_User::login($data)){
                 $_SESSION['user'] = $user;
                 $_SESSION['message'] = array("type" => "success", "message" => "Succesvol ingelogd.");
                 Core::render(PARTIALS . 'start/start.php', array('user' => $user));

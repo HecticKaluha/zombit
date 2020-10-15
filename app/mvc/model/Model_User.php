@@ -69,6 +69,16 @@ class Model_User extends  Model
         }
     }
 
+    static function checkPasswordResetCode($data){
+        $bean = R::findOne(self::$type, 'email = ?', array($data['email']));
+        if($bean->code == $data['code']){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
 
 }
 

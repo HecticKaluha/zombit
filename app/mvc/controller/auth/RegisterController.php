@@ -57,17 +57,5 @@ class RegisterController
             Core::render(PARTIALS . 'auth/register.php', array('data' => $data, 'errors' => $request->getErrors()));
         }
     }
-
-    public function register()
-    {
-
-    }
-
-    public function forgotPassword()
-    {
-
-    }
-
-
 }
 

@@ -49,11 +49,23 @@ class Router
                         } else {
                             // Als ze niet bestaan, wordt alleen de functie uitgevoerd
                             try {
-                                $controller->$action();
+                                $reflectedFunction = new ReflectionMethod($controller->getName(), $action);
+                                if(count( $reflectedFunction->getParameters()) == 0){
+//                                    try {
+                                        $controller->$action();
+//                                    }
+//                                    catch (Exception $e) {
+//                                        $this->errorController->error_scripting_mistake($controller->getName(), $action);
+//                                    }
+                                }
                                 //wanneer de functie wel parameters accepteerd, maar deze niet zijn meegegeven, dan wordt er een error weergegeven
-                            } catch (ArgumentCountError $e) {
-                                $this->errorController->error_incorrect_parameter_count($controller->getName(), $action);
+                                else{
+                                    $this->errorController->error_incorrect_parameter_count($controller->getName(), $action);
+                                }
+                            } catch (ReflectionException $e) {
+                                $this->errorController->error_router_reflection($controller->getName(), $action);
                             }
+
                         }
                     } else {
                         $this->errorController->error_wrong_route_access_type($controller->getName(), $action, $_SERVER['REQUEST_METHOD']);

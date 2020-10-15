@@ -72,12 +72,26 @@ class PasswordController
     }
 
     public function checkCode(){
-        var_dump('aangekomen');
-        die();
+        $request = new CheckPasswordResetCodeRequest($_POST);
+        $data = $request->getData();
+        if($request->isValid()){
+            if(Model_User::checkPasswordResetCode($data)){
+                Core::render(PARTIALS . '/auth/resetPassword.php', array('data' => $data));
+            }
+            else{
+                $errors = array("code" => array("De opgegeven code komt niet overeen met de wachtwoordresetcode van dit account."));
+                Core::render(PARTIALS . '/auth/passwordResetCheckCode.php', array('data' => $data, 'errors' => $errors));
+            }
+        }
+        else{
+            Core::render(PARTIALS . '/auth/passwordResetCheckCode.php', array('data' => $data, 'errors' => $request->getErrors()));
+        }
         //make checkcode request and validate it.
     }
 
     public function resetPassword(){
+        var_dump("aangekomen");
+        die();
         //code to reset the password
     }
 

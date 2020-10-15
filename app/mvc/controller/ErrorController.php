@@ -36,4 +36,14 @@ class ErrorController{
         $message = "ERROR - De functie $action() die u probeerde aan te roepen in $controller accepteerd geen request van het type $type ";
         Core::render('app/mvc/view/partials/errors/error.php', ["error" => true, "message" => $message]);
     }
+
+    public function error_scripting_mistake($controller, $action){
+        $message = "ERROR - De functie $action() die u probeerde aan te roepen in $controller bevat codematige errors en heeft een exception opgegooid. Contacteer de beheerder van Zombit ";
+        Core::render('app/mvc/view/partials/errors/error.php', ["error" => true, "message" => $message]);
+    }
+
+    public function error_router_reflection($controller, $action){
+        $message = "ERROR - De functie $action() die u probeerde aan te roepen in $controller kon niet worden gereflect in de router. Contacteer de beheerder van Zombit ";
+        Core::render('app/mvc/view/partials/errors/error.php', ["error" => true, "message" => $message]);
+    }
 }

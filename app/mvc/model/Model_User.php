@@ -23,24 +23,28 @@ class Model_User extends  Model
         return R::load('user', $id);
     }
 
-    static function store($data)
+    static function getUserByEmail($email){
+        return R::findOne('user', 'email = ?', array($email));
+    }
+
+    static function store($email, $username, $password)
     {
         $user = R::dispense(self::$type);
-        $user->email = $data['email'];
-        $user->username = $data['username'];
-        $user->password = PASSWORD_HASH($data['password'], PASSWORD_BCRYPT);
+        $user->email = $email;
+        $user->username = $username;
+        $user->password = PASSWORD_HASH($password, PASSWORD_BCRYPT);
         $id = R::store($user);
         return $user;
     }
 
     function patchUser($data)
     {
-        // Maak hier de code om een medewerker te bewerken
+        // Maak hier de code om een user te bewerken
     }
 
     function destroyUser($id)
     {
-        // Maak hier de code om een medewerker te verwijderen
+        // Maak hier de code om een user te verwijderen
     }
 
     /**
@@ -59,9 +63,9 @@ class Model_User extends  Model
         return self::$type;
     }
 
-    static function login($data){
-        $bean = R::findOne(self::$type, "email = ?", array($data['email']));
-        if(!PASSWORD_VERIFY($data['password'], $bean->password)) {
+    static function login($email, $password){
+        $bean = R::findOne(self::$type, "email = ?", array($email));
+        if(!PASSWORD_VERIFY($password, $bean->password)) {
             return false;
         }
         else{
@@ -69,15 +73,25 @@ class Model_User extends  Model
         }
     }
 
-    static function checkPasswordResetCode($data){
-        $bean = R::findOne(self::$type, 'email = ?', array($data['email']));
-        if($bean->code == $data['code']){
+    static function checkPasswordResetCode($email, $code){
+        $bean = R::findOne(self::$type, 'email = ?', array($email));
+        if($bean->code == $code){
             return true;
         }
         else{
             return false;
         }
     }
+
+    static function resetPassword($email, $password){
+        $user = self::getUserByEmail($email);
+        $user->password = PASSWORD_HASH($password, PASSWORD_BCRYPT);
+        $user->code = null;
+        $id = R::store($user);
+        return $user;
+    }
+
+
 
 
 }

@@ -1,7 +1,7 @@
 <form class="flex flex-column flex-between form" action="<?= URL ?>password/resetPassword" method="POST">
     <div class="flex flex-column flex-1 flex-center">
         <div class="flex flex-column">
-            <h3>Vul je nieuwe wachtwoord din</h3>
+            <h3>Vul je nieuwe wachtwoord in</h3>
 
             <div class="flex flex-column">
                 <div class="flex flex-row form-row">
@@ -25,6 +25,8 @@
                     </div>
                 <?php endif;?>
             </div>
+
+            <input type="hidden" name="email" id="email" value="<?= $data["email"] ?>">
 
         </div>
     </div>

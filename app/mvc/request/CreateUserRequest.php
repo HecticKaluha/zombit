@@ -14,18 +14,4 @@ class CreateUserRequest extends Request
     {
         $this->validate($data);
     }
-
-    //override the parent method
-    function validate($data){
-        $result = $this->validateRequest($this->type, $this->rules, $data);
-        $this->valid = $result['valid'];
-        $this->data = $result['data'];
-        if(!$this->valid){
-            $this->errors = $result['errors'];
-        }
-        if(!$hashed = PASSWORD_HASH($data['password'], PASSWORD_BCRYPT)){
-            $this->valid = false;
-            array_push($this->errors['password'], "Dit wachtwoord kon niet worden gehashed. Vul een ander wachtwoord in.");
-        }
-    }
 }

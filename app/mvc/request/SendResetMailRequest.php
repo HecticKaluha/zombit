@@ -1,11 +1,10 @@
 <?php
 
-class ResetPasswordRequest extends Request
+class SendResetMailRequest extends Request
 {
     protected $type = 'user';
     protected $rules = [
-        "password" => 'required,min:8',
-        "confirm_password" => "required"
+        "email" => 'required,exists,email',
     ];
 
     public function __construct($data)

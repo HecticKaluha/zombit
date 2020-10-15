@@ -73,7 +73,7 @@ class Request
                             break;
                     }
                 }
-            } //the field is not found din the rulesset, no rules apply
+            } //the field is not found in the rulesset, no rules apply
             else {
                 array_push($notFound, $key);
             }
@@ -86,6 +86,13 @@ class Request
                 if ($post[$toConfirm] != $post[$key]) {
                     array_push($errors[$key], "$key kwam niet overeen met $toConfirm.");
                     $valid = false;
+                }
+            }
+            //check if given password is hashable after cleaning the inputdata
+            if($key === "password"){
+                if(!$hashed = PASSWORD_HASH($data[$key], PASSWORD_BCRYPT)){
+                    $valid = false;
+                    array_push($errors[$key], "Dit wachtwoord kon niet worden gehashed. Vul een ander wachtwoord in.");
                 }
             }
         }

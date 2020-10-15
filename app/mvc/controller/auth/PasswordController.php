@@ -50,7 +50,7 @@ class PasswordController
 
     public function sendResetMail()
     {
-        $request = new ResetPasswordRequest($_POST);
+        $request = new SendResetMailRequest($_POST);
         $data = $request->getData();
         if ($request->isValid()) {
             //maak code voor password reset aan.
@@ -75,7 +75,7 @@ class PasswordController
         $request = new CheckPasswordResetCodeRequest($_POST);
         $data = $request->getData();
         if($request->isValid()){
-            if(Model_User::checkPasswordResetCode($data)){
+            if(Model_User::checkPasswordResetCode($data['email'], $data['code'])){
                 Core::render(PARTIALS . '/auth/resetPassword.php', array('data' => $data));
             }
             else{
@@ -86,13 +86,18 @@ class PasswordController
         else{
             Core::render(PARTIALS . '/auth/passwordResetCheckCode.php', array('data' => $data, 'errors' => $request->getErrors()));
         }
-        //make checkcode request and validate it.
     }
 
     public function resetPassword(){
-        var_dump("aangekomen");
-        die();
-        //code to reset the password
+        $request = new resetpasswordRequest($_POST);
+        $data = $request->getData();
+        if($request->isValid()){
+            Model_User::resetPassword($data['email'], $data['password']);
+            Core::render(PARTIALS . '/auth/login.php', array('data' => $data));
+        }
+        else{
+            Core::render(PARTIALS . '/auth/resetPassword.php', array('data' => $data, 'errors' => $request->getErrors()));
+        }
     }
 
     public function logOut()

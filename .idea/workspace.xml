@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b740cd1-ff4d-461e-b869-94c6ecb43b50" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Zombit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Zombit.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/controller/auth/PasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/auth/PasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/dao/UserDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/dao/UserDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/service/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/service/UserService.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/view/mails/passwordResetMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/view/mails/passwordResetMail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/view/partials/auth/passwordResetMailSent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/view/partials/auth/passwordResetCheckCode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/request/CreateUserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/request/CreateUserRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/request/LoginUserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/request/LoginUserRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/request/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/request/Request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/request/ResetPasswordRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/request/ResetPasswordRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/view/partials/auth/passwordResetCheckCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/view/partials/auth/passwordResetCheckCode.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,7 +95,9 @@
       <workItem from="1589875413583" duration="218000" />
       <workItem from="1593972357877" duration="5630000" />
       <workItem from="1594028712443" duration="3000" />
-      <workItem from="1594042579845" duration="29481000" />
+      <workItem from="1594042579845" duration="29650000" />
+      <workItem from="1602748026837" duration="324000" />
+      <workItem from="1602748723401" duration="1518000" />
     </task>
     <servers />
   </component>

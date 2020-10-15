@@ -3,16 +3,16 @@
         <div class="flex flex-column">
             <h3>Wachtwoordreset</h3>
             <h4>We hebben een e-mail met een code verstuurd naar "<?= $data['email'] ?>". Vul de code hieronder in
-                verder te
-                gaan met het resetten van je wachtwoord.</h4>
+                om verder te gaan met het resetten van je wachtwoord.</h4>
             <div class="flex flex-row form-row">
-                <label for="code">Vul de code in: </label><input type="text" name="code" id="code"><span class="error">*</span>
+                <label for="code">Vul de code in: </label><input type="text" name="code" id="code"><span
+                        class="error">*</span>
             </div>
             <?php if (!empty($errors['code'])): ?>
-            <div class="errors">
-                <p><?= implode('<br>', $errors['code']); ?></p>
-            </div>
-            <?php endif;?>
+                <div class="errors">
+                    <p><?= implode('<br>', $errors['code']); ?></p>
+                </div>
+            <?php endif; ?>
 
             <input type="hidden" name="email" id="email" value="<?= $data["email"] ?>">
 

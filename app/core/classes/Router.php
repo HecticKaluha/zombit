@@ -33,7 +33,6 @@ class Router
             if ($found_file) {
                 $controller = $this->url->getController();
                 $controller = new $controller;
-                $controller->setName($this->url->getController());
                 $action = $this->url->getAction();
                 // Vervolgens wordt er gekeken of er een functie met de naam bestaat die in de key action zit.
                 // Bijvoorbeeld: http://localhost/Students/Edit/1, dan is de action Edit.

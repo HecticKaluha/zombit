@@ -1,7 +1,7 @@
 <?php
-class LevelController{
+class LevelController extends Controller{
 
-    private $methodAccess = [
+    protected $methodAccess = [
         'index' => 'GET',
         'show' => 'GET',
         'create' => 'GET',
@@ -11,28 +11,8 @@ class LevelController{
         'delete' => 'GET',
         'destroy' => 'POST',
     ];
-    private $name;
+    protected $name = 'LevelController';
 
-    public function getMethodAccess(): array
-    {
-        return $this->methodAccess;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param mixed $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
 
     public function index()
     {

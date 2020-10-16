@@ -1,42 +1,14 @@
 <?php
 
-class RegisterController
+class RegisterController extends Controller
 {
-    private $methodAccess = [
+    protected $methodAccess = [
         'create' => 'GET',
         'store' => 'POST',
         'register' => 'GET',
         'forgotPassword' => 'GET',
     ];
-    private $name;
-
-    /**
-     * @return array
-     */
-    public function getMethodAccess(): array
-    {
-        return $this->methodAccess;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param mixed $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
-
-//    static function index(){
-//        Core::render(PARTIALS . 'auth/register.php');
-//    }
+    protected $name = 'RegisterController';
 
 
     public function create()

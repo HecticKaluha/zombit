@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b740cd1-ff4d-461e-b869-94c6ecb43b50" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/mvc/controller/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/core/classes/Router.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/core/classes/Router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/controller/LevelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/LevelController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/controller/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/UserController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mvc/controller/auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mvc/controller/auth/PasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/auth/PasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/dao/UserDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/dao/UserDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/service/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/service/UserService.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/controller/auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mvc/request/CreateUserRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/request/CreateUserRequest.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +147,7 @@
       <workItem from="1594028712443" duration="3000" />
       <workItem from="1594042579845" duration="29650000" />
       <workItem from="1602748026837" duration="324000" />
-      <workItem from="1602748723401" duration="22553000" />
+      <workItem from="1602748723401" duration="24523000" />
     </task>
     <servers />
   </component>

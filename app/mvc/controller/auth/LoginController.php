@@ -1,32 +1,12 @@
 <?php
-class LoginController{
+class LoginController extends Controller{
 
-    private $methodAccess = [
+    protected $methodAccess = [
         'index' => 'GET',
         'login' => 'POST'
     ];
-    private $name;
+    protected $name = 'LoginController';
 
-    public function getMethodAccess(): array
-    {
-        return $this->methodAccess;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param mixed $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
-    }
 
     public function index(){
         Core::render(PARTIALS . 'auth/login.php');

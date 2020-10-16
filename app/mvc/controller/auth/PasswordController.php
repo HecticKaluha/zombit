@@ -1,15 +1,15 @@
 <?php
 
-class PasswordController
+class PasswordController extends Controller
 {
-    private $methodAccess = [
+    protected $methodAccess = [
         'index' => 'GET',
         'sendResetMail' => 'POST',
         'checkCode' => 'POST',
         'resetPassword' => 'POST',
         'logOut' => 'GET',
     ];
-    private $name;
+    protected $name = 'PasswordController';
     private $userService;
 
     /**
@@ -19,28 +19,6 @@ class PasswordController
     public function __construct()
     {
         $this->userService = new UserService();
-    }
-
-
-    public function getMethodAccess(): array
-    {
-        return $this->methodAccess;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getName()
-    {
-        return $this->name;
-    }
-
-    /**
-     * @param mixed $name
-     */
-    public function setName($name)
-    {
-        $this->name = $name;
     }
 
     public function index()
@@ -107,7 +85,5 @@ class PasswordController
     {
 
     }
-
-
 }
 

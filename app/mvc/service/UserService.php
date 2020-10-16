@@ -39,20 +39,20 @@ class UserService implements ServiceInterface
         return $this->userDao->generatePasswordResetCode($email);
     }
 
-    function checkPasswordResetCode($data){
-        return $this->userDao->checkPasswordResetCode($data);
+    function checkPasswordResetCode($email,$code){
+        return $this->userDao->checkPasswordResetCode($email,$code);
     }
 
     function updatePassword(){
         return $this->userDao->updatePassword();
     }
 
-    function resetPassword($data){
-        return $this->userDao->resetPassword($data);
+    function resetPassword($email, $password){
+        return $this->userDao->resetPassword($email, $password);
     }
 
-    function login($data){
-        return $this->userDao->login($data);
+    function login($email, $password){
+        return $this->userDao->login($email, $password);
     }
 }
 

@@ -5,11 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mvc/controller/auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/auth/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mvc/controller/auth/PasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/auth/PasswordController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/controller/auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/controller/auth/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/dao/DaoInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/dao/DaoInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mvc/dao/UserDao.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/dao/UserDao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/model/Model_User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/model/Model_User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mvc/service/ServiceInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/service/ServiceInterface.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mvc/service/UserService.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/mvc/service/UserService.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -146,7 +142,7 @@
       <workItem from="1594028712443" duration="3000" />
       <workItem from="1594042579845" duration="29650000" />
       <workItem from="1602748026837" duration="324000" />
-      <workItem from="1602748723401" duration="21783000" />
+      <workItem from="1602748723401" duration="22553000" />
     </task>
     <servers />
   </component>

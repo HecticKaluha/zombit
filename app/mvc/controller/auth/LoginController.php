@@ -37,7 +37,7 @@ class LoginController{
         $data = $request->getData();
         if($request->isValid()){
             $userService = new UserService();
-            if($user = $userService->login($data)){
+            if($user = $userService->login($data['email'], $data['password'])){
                 $_SESSION['user'] = $user;
                 $_SESSION['message'] = array("type" => "success", "message" => "Succesvol ingelogd.");
                 Core::render(PARTIALS . 'start/start.php', array('user' => $user));

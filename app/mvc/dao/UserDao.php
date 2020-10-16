@@ -62,17 +62,17 @@ class UserDao implements DaoInterface
         return $code;
     }
 
-    public function resetPassword($data){
-        $user = $this->getUserByEmail($data['email']);
-        $user->password = PASSWORD_HASH($data['password'], PASSWORD_BCRYPT);
+    public function resetPassword($email, $password){
+        $user = $this->getUserByEmail($email);
+        $user->password = PASSWORD_HASH($password, PASSWORD_BCRYPT);
         $user->code = null;
         $id = R::store($user);
         return $user;
     }
 
-    public function checkPasswordResetCode($data){
-        $bean = R::findOne($this->type, 'email = ?', array($data['email']));
-        if($bean->code == $data['code']){
+    public function checkPasswordResetCode($email,$code){
+        $user = R::findOne($this->type, 'email = ?', array($email));
+        if($user->code == $code){
             return true;
         }
         else{
@@ -80,13 +80,13 @@ class UserDao implements DaoInterface
         }
     }
 
-    public function login($data){
-        $bean = R::findOne($this->type, "email = ?", array($data['email']));
-        if(!PASSWORD_VERIFY($data['password'], $bean->password)) {
+    public function login($email, $password){
+        $user = R::findOne($this->type, "email = ?", array($email));
+        if(!PASSWORD_VERIFY($password, $user->password)) {
             return false;
         }
         else{
-            return $bean;
+            return $user;
         }
     }
 }

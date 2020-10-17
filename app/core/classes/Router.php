@@ -49,9 +49,20 @@ class Router
                             // Als ze niet bestaan, wordt alleen de functie uitgevoerd
                             try {
                                 $reflectedFunction = new ReflectionMethod($controller->getName(), $action);
-                                if(count( $reflectedFunction->getParameters()) == 0){
+                                if(count($reflectedFunction->getParameters()) == 0){
 //                                    try {
-                                        $controller->$action();
+                                        $passed = true;
+                                        foreach($controller->getMiddleware()[$action] as $middleware)
+                                        {
+                                            $middlewareInstance = new $middleware();
+                                            if(!$middlewareInstance->getPassed()){
+                                                $passed = false;
+                                                break;
+                                            }
+                                        }
+                                        if($passed){
+                                            $controller->$action();
+                                        }
 //                                    }
 //                                    catch (Exception $e) {
 //                                        $this->errorController->error_scripting_mistake($controller->getName(), $action);

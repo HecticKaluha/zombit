@@ -1,5 +1,4 @@
 <?php
-//namespace Zombit;
 session_start();
 
 define("ROOT", dirname(__DIR__) . DIRECTORY_SEPARATOR);
@@ -16,4 +15,3 @@ R::useFeatureSet( 'novice/latest' );
 
 $router = new Router();
 $router->route();
-//Router::route();

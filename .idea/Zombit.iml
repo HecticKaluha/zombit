@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/app/core/classes" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/app/mvc/controller" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/app/core" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/app/mvc/middleware" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/packages/RedBeanPHP5_4_2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/app/mvc/dao" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/app/mvc/request" isTestSource="false" />

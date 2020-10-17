@@ -5,6 +5,10 @@ class LoginController extends Controller{
         'index' => 'GET',
         'login' => 'POST'
     ];
+    protected $middleware = [
+        'index' => [],
+        'login' => []
+    ];
     protected $name = 'LoginController';
 
 
@@ -18,7 +22,7 @@ class LoginController extends Controller{
         if($request->isValid()){
             $userService = new UserService();
             if($user = $userService->login($data['email'], $data['password'])){
-                $_SESSION['user'] = $user;
+                $_SESSION['user'] = $user->id;
                 $_SESSION['message'] = array("type" => "success", "message" => "Succesvol ingelogd.");
                 Core::render(PARTIALS . 'start/start.php', array('user' => $user));
             }

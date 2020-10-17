@@ -13,4 +13,7 @@ class Controller{
     {
         return $this->name;
     }
+    public function getMiddleware(){
+        return $this->middleware;
+    }
 }

@@ -8,6 +8,7 @@
         "app/mvc/service/",
         "app/mvc/dao/",
         "app/mvc/model",
+        "app/mvc/middleware",
         "app/core/",
         "app/core/classes",
         "packages/RedBeanPHP5_4_2"

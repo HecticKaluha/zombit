@@ -8,6 +8,10 @@ class RegisterController extends Controller
         'register' => 'GET',
         'forgotPassword' => 'GET',
     ];
+    protected $middleware = [
+        'create' => [],
+        'store' => []
+    ];
     protected $name = 'RegisterController';
 
 

@@ -9,6 +9,12 @@ class PasswordController extends Controller
         'resetPassword' => 'POST',
         'logOut' => 'GET',
     ];
+    protected $middleware = [
+        'index' => [],
+        'sendResetMail' => [],
+        'checkCode' => [],
+        'resetPassword' => []
+    ];
     protected $name = 'PasswordController';
     private $userService;
 
@@ -37,14 +43,19 @@ class PasswordController extends Controller
             $subject = 'Reset je wachtwoord voor ' . env('APP_NAME');
             $template = 'passwordResetMail.php';
             $params = ['url' => env('SITE_DOMAIN').'password/resetForm', 'code' => $code];
+            $mail = Core::mail($data['email'], $subject, $template, $params);
+            
+            var_dump($mail->ErrorInfo);
+            die();
 
-            if (Core::mail($data['email'], $subject, $template, $params)) {
+            //todo check if mail is sent. 
+            if($mail) {
                 Core::render(PARTIALS . '/auth/passwordResetCheckCode.php', array('data' => $data));
             } else {
                 ErrorController::error_cannot_send_mail($mail->ErrorInfo);
             }
         } else {
-            $errors = array("email" => array("Het is niet gelukt om een mail te sturen naar dit email. Probeer het later opnieuw."));
+            $errors = array("email" => array("Het is niet gelukt om een mail te sturen naar dit e-mail. Probeer het later opnieuw."));
             Core::render(PARTIALS . '/auth/forgotPassword.php', array('data' => $data, 'errors' => $errors));
         }
     }
@@ -79,11 +90,6 @@ class PasswordController extends Controller
         else{
             Core::render(PARTIALS . '/auth/resetPassword.php', array('data' => $data, 'errors' => $request->getErrors()));
         }
-    }
-
-    public function logOut()
-    {
-
     }
 }
 

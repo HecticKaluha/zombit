@@ -25,6 +25,7 @@ class Core
         $mail = new PHPMailer;
 
         $mail->isSMTP();                                    // Set mailer to use SMTP
+        $mail->SMTPDebug = 4;
         $mail->Host = env('MAIL_HOST');                     // Specify main and backup SMTP servers
         $mail->SMTPAuth = env('MAIL_SMTP_AUTH');            // Enable SMTP authentication
         $mail->Username = env('MAIL_USERNAME');             // SMTP username
@@ -39,13 +40,14 @@ class Core
 
         $mail->Subject = $subject;
 
-        $body = file_get_contents(ROOT .'app/mvc/view/mails/' . $template);
-        foreach($params as $key => $value)
-        {
-            $body = str_replace('{{'.$key.'}}', $value, $body);
+        $body = file_get_contents(ROOT . 'app/mvc/view/mails/' . $template);
+        foreach ($params as $key => $value) {
+            $body = str_replace('{{' . $key . '}}', $value, $body);
         }
 
         $mail->Body = $body;
-        return $mail->send();
+
+        $mail->send();
+        return $mail;
     }
 }

@@ -11,6 +11,16 @@ class UserController extends Controller{
         'delete' => 'GET',
         'destroy' => 'POST',
     ];
+    protected $middleware = [
+        'index' => [],
+        'show' => [],
+        'create' => [],
+        'store' => [],
+        'edit' =>[],
+        'update' => [],
+        'delete' => [],
+        'destroy' => []
+    ];
     protected $name = 'UserController';
 
 

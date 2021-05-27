@@ -33,7 +33,7 @@ class ErrorController{
     }
 
     public function error_cannot_send_mail($errorInfo){
-        $message = "ERROR - De functie $action() die u probeerde aan te roepen in $controller accepteerd geen request van het type $type ";
+        $message = "ERROR - De mail kon niet verstuurd worden. $errorInfo ";
         Core::render('app/mvc/view/partials/errors/error.php', ["error" => true, "message" => $message]);
     }
 

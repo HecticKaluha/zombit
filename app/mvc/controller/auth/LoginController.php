@@ -7,7 +7,8 @@ class LoginController extends Controller{
     ];
     protected $middleware = [
         'index' => [],
-        'login' => []
+        'login' => [],
+        'logOut' => []
     ];
     protected $name = 'LoginController';
 

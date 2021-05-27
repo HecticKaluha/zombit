@@ -3,7 +3,7 @@
         <div class="flex flex-column">
             <h3>Wachtwoordreset</h3>
             <div class="flex flex-row form-row">
-                <label for="email">Vul je email in: </label><input type="email" name="email" id="email" value="<?=  isset($user->email) ? $user->email : $data['email'] ?>"><span class="error">*</span>
+                <label for="email">Vul je e-mail in: </label><input type="email" name="email" id="email" value="<?=  isset($user->email) ? $user->email : $data['email'] ?>"><span class="error">*</span>
             </div>
             <?php if (!empty($errors['email'])): ?>
                 <div class="errors">

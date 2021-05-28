@@ -13,7 +13,6 @@ class Router
     function route()
     {
         // Hier wordt de functie aangeroepen die de URL op splitst op het standaard seperatie teken (in PHP is dit een /)
-
         if(isset($_GET['url'])){
             $this->url = new Url($_GET['url']);
         }else{
@@ -43,39 +42,40 @@ class Router
                     $methodAccess = $controller->getMethodAccess();
                     if ($_SERVER['REQUEST_METHOD'] == (array_key_exists($action, $methodAccess) ? strtoupper($methodAccess[$action]) : Null)) {
                         // Wanneer die bestaat wordt er gekeken of je parameters hebt meegegeven bestaan. Als die bestaan worden die aan de functie meegegeven
-                        if ($this->url->getParams()) {
-                            $controller->$action($this->url->getParams());
-                        } else {
-                            // Als ze niet bestaan, wordt alleen de functie uitgevoerd
-                            try {
-                                $reflectedFunction = new ReflectionMethod($controller->getName(), $action);
-                                if(count($reflectedFunction->getParameters()) == 0){
+                        //check middleware
+                        $passed = true;
+                        foreach($controller->getMiddleware()[$action] as $middleware)
+                        {
+                            $middlewareInstance = new $middleware();
+                            if(!$middlewareInstance->getPassed()){
+                                $passed = false;
+                                break;
+                            }
+                        }
+                        if($passed){
+                            if ($this->url->getParams()) {
+                                $controller->$action($this->url->getParams());
+                            } else {
+                                // Als ze niet bestaan, wordt alleen de functie uitgevoerd
+                                try {
+                                    $reflectedFunction = new ReflectionMethod($controller->getName(), $action);
+                                    if(count($reflectedFunction->getParameters()) == 0){
 //                                    try {
-                                        $passed = true;
-                                        foreach($controller->getMiddleware()[$action] as $middleware)
-                                        {
-                                            $middlewareInstance = new $middleware();
-                                            if(!$middlewareInstance->getPassed()){
-                                                $passed = false;
-                                                break;
-                                            }
-                                        }
-                                        if($passed){
-                                            $controller->$action();
-                                        }
+
+                                        $controller->$action();
 //                                    }
 //                                    catch (Exception $e) {
 //                                        $this->errorController->error_scripting_mistake($controller->getName(), $action);
 //                                    }
+                                    }
+                                    //wanneer de functie wel parameters accepteerd, maar deze niet zijn meegegeven, dan wordt er een error weergegeven
+                                    else{
+                                        $this->errorController->error_incorrect_parameter_count($controller->getName(), $action);
+                                    }
+                                } catch (ReflectionException $e) {
+                                    $this->errorController->error_router_reflection($controller->getName(), $action);
                                 }
-                                //wanneer de functie wel parameters accepteerd, maar deze niet zijn meegegeven, dan wordt er een error weergegeven
-                                else{
-                                    $this->errorController->error_incorrect_parameter_count($controller->getName(), $action);
-                                }
-                            } catch (ReflectionException $e) {
-                                $this->errorController->error_router_reflection($controller->getName(), $action);
                             }
-
                         }
                     } else {
                         $this->errorController->error_wrong_route_access_type($controller->getName(), $action, $_SERVER['REQUEST_METHOD']);

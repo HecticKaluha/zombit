@@ -9,11 +9,11 @@ class Controller{
     /**
      * @return mixed
      */
-    public function getName()
+    public function getName() : string
     {
         return $this->name;
     }
-    public function getMiddleware(){
+    public function getMiddleware() : array{
         return $this->middleware;
     }
 }

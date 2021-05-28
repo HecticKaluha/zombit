@@ -44,12 +44,9 @@ class PasswordController extends Controller
             $template = 'passwordResetMail.php';
             $params = ['url' => env('SITE_DOMAIN').'password/resetForm', 'code' => $code];
             $mail = Core::mail($data['email'], $subject, $template, $params);
-            
-            var_dump($mail->ErrorInfo);
-            die();
 
-            //todo check if mail is sent. 
-            if($mail) {
+            //todo check if mail is sent.
+            if(empty($mail->ErrorInfo)) {
                 Core::render(PARTIALS . '/auth/passwordResetCheckCode.php', array('data' => $data));
             } else {
                 ErrorController::error_cannot_send_mail($mail->ErrorInfo);

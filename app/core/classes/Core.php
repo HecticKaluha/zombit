@@ -25,7 +25,7 @@ class Core
         $mail = new PHPMailer;
 
         $mail->isSMTP();                                    // Set mailer to use SMTP
-        $mail->SMTPDebug = 4;
+//        $mail->SMTPDebug = 4;
         $mail->Host = env('MAIL_HOST');                     // Specify main and backup SMTP servers
         $mail->SMTPAuth = env('MAIL_SMTP_AUTH');            // Enable SMTP authentication
         $mail->Username = env('MAIL_USERNAME');             // SMTP username
